@@ -1,0 +1,13 @@
+.search-button {
+  flex: 0.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff7d19;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-button .icon {
+  color: #fff;
+}

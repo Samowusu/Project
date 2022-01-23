@@ -1,0 +1,18 @@
+.location {
+  flex: 1.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location .icon {
+  color: #fff;
+  background-color: #000;
+}
+
+.location input {
+  margin-left: 5px;
+  border: none;
+  outline-width: 0;
+  color: rgba(0, 0, 0, 0.6);
+}

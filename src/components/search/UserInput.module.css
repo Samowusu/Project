@@ -1,0 +1,19 @@
+.user-input {
+  flex: 2;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #e5e5e5;
+}
+
+.user-input .icon {
+  font-weight: 200;
+}
+
+.user-input input {
+  width: 90%;
+  margin-left: 5px;
+  border: none;
+  outline-width: 0;
+  color: rgba(0, 0, 0, 0.6);
+}
