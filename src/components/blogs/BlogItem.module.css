@@ -2,24 +2,25 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-image: url("../../images/blog.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
-  padding: 20px;
-  margin-top: 20px;
-  width: 30%;
-  height: 12rem;
-  border-radius: 10px;
+  padding: 1.25rem 2.5rem 1.25rem 1.25rem;
+  width: 19.44rem;
+  height: 13.69rem;
+  border-radius: 12px;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 .blog-item p {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
-  margin-bottom: 10px;
+  margin-bottom: 0.63rem;
 }
 
 .blog-item h2 {
-  font-size: 18px;
+  font-size: 1.13rem;
   font-weight: 700;
+  line-height: 1.69rem;
 }

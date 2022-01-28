@@ -1,12 +1,11 @@
 import React from "react";
 import classes from "./SearchButton.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import SearchIcon from "../../assets/svgs/SearchIcon";
 
 function SearchButton() {
   return (
     <button className={classes["search-button"]}>
-      <FontAwesomeIcon icon={faSearch} className={classes.icon} />
+      <SearchIcon width="20" height="20" color="white" />
     </button>
   );
 }

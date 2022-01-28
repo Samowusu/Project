@@ -4,17 +4,20 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 30%;
+  width: 11.31rem;
+  height: 11.31rem;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 12px;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 .specialty-item img {
-  border-radius: 50%;
-  width: 60%;
+  width: 5.19rem;
+  height: 5.19rem;
 }
 
 .specialty-item h3 {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
 }

@@ -1,10 +1,12 @@
 .App {
-  margin: 50px;
+  margin: 20px;
 }
 
-.doctors {
-  width: 60%;
+.ui-button {
+  background: #00778a;
   margin-top: 10px;
+}
+
+.container {
   display: flex;
-  justify-content: space-between;
 }

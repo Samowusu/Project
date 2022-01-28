@@ -2,4 +2,9 @@
   border: none;
   cursor: pointer;
   color: #fff;
+  width: 11.25rem;
+  height: 3rem;
+  font-size: 00.88rem;
+  font-weight: 700;
+  border-radius: 4px;
 }

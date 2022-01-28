@@ -1,12 +1,14 @@
 import React from "react";
 import classes from "./SpecialtyItem.module.css";
-import skin from "../../../images/Skin.png";
+import skin from "../../../assets/images/item.png";
 
-function SpecialtyItem() {
+SpecialtyItem.defaultProps = { title: "Dermatology", image: skin };
+
+function SpecialtyItem({ title, image }) {
   return (
     <div className={classes["specialty-item"]}>
-      <img src={skin} alt="skin" />
-      <h3>Dermatology</h3>
+      <img src={image} alt="skin" />
+      <h3>{title}</h3>
     </div>
   );
 }

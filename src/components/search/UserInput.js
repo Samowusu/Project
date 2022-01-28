@@ -1,12 +1,11 @@
 import React from "react";
 import classes from "./UserInput.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import BlackSearchIcon from "../../assets/svgs/BlackSearchIcon";
 
 function UserInput() {
   return (
     <div className={classes["user-input"]}>
-      <FontAwesomeIcon icon={faSearch} className={classes.icon} />
+      <BlackSearchIcon />
       <input
         type="text"
         placeholder="Specialist, hospital, procedure, condi..."
