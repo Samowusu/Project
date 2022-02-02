@@ -10,3 +10,11 @@
 .container {
   display: flex;
 }
+
+.carousel .control-dots .dot {
+  background: #c4c4c4;
+}
+
+.carousel .control-dots .dot.selected {
+  background: #f87537;
+}

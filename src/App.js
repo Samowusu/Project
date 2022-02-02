@@ -1,10 +1,11 @@
 import "./App.css";
 import Search from "./components/search/Search";
 import DoctorProfile from "./components/doctors/DoctorProfile";
-import BlogItem from "./components/blogs/BlogItem";
 import SpecialtyItem from "./components/popularSearches/specialties/SpecialtyItem";
 import Button from "./components/UI/Button";
-import { doctorsList, blogsList, specialtiesList } from "./Data";
+import { doctorsList, blogsList, specialtiesList, hospitalsList } from "./Data";
+import Blogs from "./components/blogs/Blogs";
+import PopularSearches from "./components/popularSearches/PopularSearches";
 
 function App() {
   return (
@@ -22,19 +23,31 @@ function App() {
         ))}
       </div>
       <div className="container">
-        {blogsList.map((blogItem) => (
-          <BlogItem
-            title={blogItem.title}
-            date={blogItem.date}
-            image={blogItem.image}
+        {hospitalsList.map((hospital) => (
+          <DoctorProfile
+            key={hospital.id}
+            name={hospital.name}
+            address={hospital.address}
+            image={hospital.image}
           />
         ))}
       </div>
       <div className="container">
-        {specialtiesList.map((item) => (
-          <SpecialtyItem title={item.title} image={item.image} />
-        ))}
+        {/* {blogsList.map((blogItem) => (
+          <BlogItem
+            key={blogItem.id}
+            title={blogItem.title}
+            date={blogItem.date}
+            image={blogItem.image}
+          />
+        ))} */}
+        <Blogs
+          blogsList={blogsList}
+          itemsPerSlide={2}
+          justifyContent="flex-start"
+        />
       </div>
+      <PopularSearches specialtiesList={specialtiesList} />
       <Button className="ui-button">All Doctors</Button>
     </div>
   );

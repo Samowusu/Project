@@ -8,20 +8,36 @@ import HeartIcon from "../../assets/svgs/HeartIcon";
 
 DoctorProfile.defaultProps = {
   name: "Dr. Arkday Sheinin, MD",
-  address: "Kingsbrook Jewish Medical Center 585 Schenectady AveTema, GA",
+  address: {
+    streetName: "",
+    hospitalName: "",
+    province: "",
+  },
   image: doctor,
   id: "A1",
-  specialty: "Dentist",
+  specialty: "",
 };
 
-function DoctorProfile({ name, address, image, id, specialty }) {
+function DoctorProfile({
+  name,
+  address: { streetName, hospitalName, province },
+  image,
+  id,
+  specialty,
+}) {
   return (
     <div className={classes["doctor-profile"]}>
       <div className={classes["doctor-profile__container"]}>
         <img src={image} alt="the doctor" />
         <h3>{name}</h3>
         <div className={classes.address}>
-          <p>{address}</p>
+          <p>
+            {hospitalName ?? null}
+            {hospitalName ? <br /> : null}
+            {streetName ?? null}
+            {streetName ? <br /> : null}
+            {province}
+          </p>
         </div>
         <div className={classes["doctor-profile__bottom"]}>
           <span className={classes.icons}>

@@ -1,15 +1,13 @@
 .specialty-item {
   display: flex;
-  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 11.31rem;
-  height: 11.31rem;
+  min-width: 180.96px;
+  height: 180.96px;
   background-color: #fff;
   border-radius: 12px;
-  margin-top: 10px;
-  margin-right: 10px;
+  margin: 10px 1.44rem 0 0;
 }
 
 .specialty-item img {

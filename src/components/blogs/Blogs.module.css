@@ -1,0 +1,25 @@
+.carousel-container {
+  width: 100%;
+}
+
+.blogs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.center {
+  justify-content: center;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.space-between {
+  justify-content: space-between;
+}
