@@ -41,11 +41,7 @@ function App() {
             image={blogItem.image}
           />
         ))} */}
-        <Blogs
-          blogsList={blogsList}
-          itemsPerSlide={2}
-          justifyContent="flex-start"
-        />
+        <Blogs blogsList={blogsList} />
       </div>
       <PopularSearches specialtiesList={specialtiesList} />
       <Button className="ui-button">All Doctors</Button>

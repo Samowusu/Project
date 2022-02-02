@@ -26,6 +26,9 @@
   background: #ff7d19;
   color: #fff;
 }
+.wrapper {
+  overflow-x: scroll;
+}
 
 .options-container {
   display: flex;
