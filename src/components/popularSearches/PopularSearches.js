@@ -2,6 +2,7 @@ import React from "react";
 import classes from "./PopularSearches.module.css";
 import Button from "../UI/Button";
 import SpecialtyItem from "./specialties/SpecialtyItem";
+import HorizonralScroller from "../horizontalScroller/horizontal-scroller-component";
 
 function PopularSearches({ specialtiesList }) {
   const scrollHandler = (event) => {
@@ -24,15 +25,22 @@ function PopularSearches({ specialtiesList }) {
         <Button className={classes.button}>Conditions</Button>
         <Button className={classes.button}>Procedures</Button>
       </div>
-      <div
-        className={classes["options-container"]}
-        id="wrapper"
-        onWheel={scrollHandler}
-      >
-        {specialtiesList.map((item) => (
-          <SpecialtyItem title={item.title} image={item.image} key={item.id} />
-        ))}
-      </div>
+        <HorizonralScroller
+        parentClass={classes["options-container"]}
+				RenderItemList={(onClickHandler) => {
+					return specialtiesList.map((item, index) => (
+						<SpecialtyItem
+							title={item.title}
+							image={item.image}
+							key={item.id}
+							onClick={() => {
+								onClickHandler(() => console.log({ index }));
+							}}
+							itemId={index}
+						/>
+					));
+				}}
+			/>
     </div>
   );
 }
