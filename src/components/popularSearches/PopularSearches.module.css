@@ -31,10 +31,7 @@
 }
 
 .options-container {
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  overflow-x: scroll;
+  width: calc(100vw - 250px);
 }
 /* width */
 ::-webkit-scrollbar {

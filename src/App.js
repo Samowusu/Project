@@ -1,7 +1,6 @@
 import "./App.css";
 import Search from "./components/search/Search";
 import DoctorProfile from "./components/doctors/DoctorProfile";
-import SpecialtyItem from "./components/popularSearches/specialties/SpecialtyItem";
 import Button from "./components/UI/Button";
 import { doctorsList, blogsList, specialtiesList, hospitalsList } from "./Data";
 import Blogs from "./components/blogs/Blogs";
@@ -33,14 +32,6 @@ function App() {
         ))}
       </div>
       <div className="container">
-        {/* {blogsList.map((blogItem) => (
-          <BlogItem
-            key={blogItem.id}
-            title={blogItem.title}
-            date={blogItem.date}
-            image={blogItem.image}
-          />
-        ))} */}
         <Blogs blogsList={blogsList} />
       </div>
       <PopularSearches specialtiesList={specialtiesList} />
