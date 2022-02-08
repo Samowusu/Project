@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./PopularSearches.module.css";
-import Button from "../UI/Button";
+import button from "../UI/Button";
 import SpecialtyItem from "./specialties/SpecialtyItem";
 import HorizontalScrollbarComponent from "../horizontalScrollbar/HorizontalScrollbarComponent";
 
@@ -8,11 +8,11 @@ function PopularSearches({ specialtiesList }) {
   return (
     <div className={classes["popular-searches"]}>
       <div className={classes["buttons-container"]}>
-        <Button className={`${classes.button} ${classes.active}`}>
+        <button className={`${classes.button} ${classes.active}`}>
           Specialties
-        </Button>
-        <Button className={classes.button}>Conditions</Button>
-        <Button className={classes.button}>Procedures</Button>
+        </button>
+        <button className={classes.button}>Conditions</button>
+        <button className={classes.button}>Procedures</button>
       </div>
       <HorizontalScrollbarComponent
         parentClass={classes["options-container"]}

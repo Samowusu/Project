@@ -5,7 +5,7 @@ import doctor from "../../assets/images/doctor.png";
 
 import CalendarIcon from "../../assets/svgs/CalendarIcon";
 import HeartIcon from "../../assets/svgs/HeartIcon";
-
+import VerifiedIcon from "../../assets/svgs/VerifiedIcon";
 DoctorProfile.defaultProps = {
   name: "Dr. Arkday Sheinin, MD",
   address: {
@@ -28,7 +28,12 @@ function DoctorProfile({
   return (
     <div className={classes["doctor-profile"]}>
       <div className={classes["doctor-profile__container"]}>
-        <img src={image} alt="the doctor" />
+        <div
+          className={classes.image}
+          style={{ backgroundImage: `url(${image})` }}
+        >
+          <VerifiedIcon className={classes.icon} />
+        </div>
         <h3>{name}</h3>
         <div className={classes.address}>
           <p>

@@ -1,0 +1,26 @@
+.banner {
+  width: 100vw;
+  height: 10.75rem;
+  background: #00778a;
+  background-image: url("https://media.discordapp.net/attachments/874307578404958258/938877316149420083/image.png?width=971&height=245");
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.banner h1 {
+  font-size: var(--xxl);
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.banner h3 {
+  font-size: var(--xl);
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+}

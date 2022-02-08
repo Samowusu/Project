@@ -1,3 +1,12 @@
+:root {
+  --xxxl: 2.88rem;
+  --xxl: 2rem;
+  --xl: 1.13rem;
+  --l: 0.88rem;
+  --m: 0.75rem;
+  --s: 0.56rem;
+}
+
 * {
   margin: 0;
   padding: 0;

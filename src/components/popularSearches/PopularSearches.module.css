@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: flex-start;
   height: 11.31rem;
-  width: 128.96px;
+  width: 8.06rem;
   border-right: 2px solid rgba(255, 125, 25, 0.4);
   margin: 10px 4.63rem 0 0;
 }
@@ -20,6 +20,8 @@
   font-weight: 400;
   font-size: 0.88rem;
   border-radius: 0;
+  border: none;
+  cursor: pointer;
 }
 
 .active {

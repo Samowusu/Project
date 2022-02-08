@@ -15,13 +15,13 @@
 }
 
 .blog-item p {
-  font-size: 0.75rem;
+  font-size: var(--m);
   font-weight: 400;
   margin-bottom: 0.63rem;
 }
 
 .blog-item h2 {
-  font-size: 1.13rem;
+  font-size: var(--xl);
   font-weight: 700;
   line-height: 1.69rem;
 }

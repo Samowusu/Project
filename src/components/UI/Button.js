@@ -1,12 +1,17 @@
 import React from "react";
-import classes from "./Button.module.css";
+import { Button } from "./Button-styles";
 
-function Button({ children, className, onClick }) {
+function ButtonComponent({ children, onClick, color, width, backgroundColor }) {
   return (
-    <button className={`${classes.button} ${className}`} onClick={onClick}>
+    <Button
+      onClick={onClick}
+      color={color}
+      $width={width}
+      $backgroundColor={backgroundColor}
+    >
       {children}
-    </button>
+    </Button>
   );
 }
 
-export default Button;
+export default ButtonComponent;

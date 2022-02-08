@@ -15,6 +15,8 @@ import item5 from "./assets/images/item5.png";
 import item6 from "./assets/images/item6.png";
 
 import hospital from "./assets/images/hospital.png";
+import hospital2 from "./assets/images/hospital2.png";
+import hospital3 from "./assets/images/hospital3.png";
 
 export const doctorsList = [
   {
@@ -164,5 +166,21 @@ export const hospitalsList = [
       streetName: "Community 22, Tema",
     },
     id: "h1",
+  },
+  {
+    name: "Acacia Hospital",
+    image: hospital2,
+    address: {
+      streetName: "Accra",
+    },
+    id: "h2",
+  },
+  {
+    name: "Ridge Hospital",
+    image: hospital3,
+    address: {
+      streetName: "Accra",
+    },
+    id: "h3",
   },
 ];

@@ -1,41 +1,29 @@
 import "./App.css";
 import Search from "./components/search/Search";
-import DoctorProfile from "./components/doctors/DoctorProfile";
-import Button from "./components/UI/Button";
 import { doctorsList, blogsList, specialtiesList, hospitalsList } from "./Data";
 import Blogs from "./components/blogs/Blogs";
 import PopularSearches from "./components/popularSearches/PopularSearches";
+import Header from "./components/header/Header";
+import Doctors from "./components/doctors/Doctors";
+import Hospitals from "./components/hospitals/Hospitals";
+import Banner from "./components/banner/Banner";
+import Button from "./components/UI/Button";
 
 function App() {
   return (
     <div className="App">
+      <Header />
+      <Button>Testing...</Button>
       <Search />
-      <div className="container">
-        {doctorsList.map((doctor) => (
-          <DoctorProfile
-            key={doctor.id}
-            name={doctor.name}
-            address={doctor.address}
-            image={doctor.image}
-            specialty={doctor.specialty}
-          />
-        ))}
+      <div className="doctors">
+        <Doctors doctorsList={doctorsList} />
+        <Hospitals hospitalsList={hospitalsList} />
       </div>
-      <div className="container">
-        {hospitalsList.map((hospital) => (
-          <DoctorProfile
-            key={hospital.id}
-            name={hospital.name}
-            address={hospital.address}
-            image={hospital.image}
-          />
-        ))}
-      </div>
+      <Banner />
       <div className="container">
         <Blogs blogsList={blogsList} />
       </div>
       <PopularSearches specialtiesList={specialtiesList} />
-      <Button className="ui-button">All Doctors</Button>
     </div>
   );
 }

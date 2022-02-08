@@ -2,13 +2,13 @@
   margin: 20px;
 }
 
-.ui-button {
-  background: #00778a;
-  margin-top: 10px;
-}
-
 .container {
   display: flex;
+}
+
+.doctors {
+  display: flex;
+  justify-content: space-between;
 }
 
 .carousel .control-dots .dot {
