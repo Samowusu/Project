@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "./Button-styles";
 
-function ButtonComponent({ children, onClick, color, width, backgroundColor }) {
+ButtonComponent.defaultProps = {
+  children: "Click Me",
+  onClick: () => {},
+  style: {
+    color: "#fff",
+    width: "11.25rem",
+    height: "3rem",
+    backgroundColor: "#00778a",
+    borderRadius: "4px",
+    fontSize: "0.88rem",
+    fontWeight: "700",
+  },
+};
+
+function ButtonComponent({ children, onClick, style }) {
   return (
     <Button
       onClick={onClick}
-      color={color}
-      $width={width}
-      $backgroundColor={backgroundColor}
+      $styles={{ ...ButtonComponent.defaultProps.style, ...style }}
     >
       {children}
     </Button>

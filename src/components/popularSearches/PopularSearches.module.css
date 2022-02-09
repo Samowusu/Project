@@ -1,6 +1,7 @@
 .popular-searches {
   display: flex;
   width: 100%;
+  margin-top: 6.25rem;
 }
 
 .buttons-container {
@@ -35,6 +36,7 @@
 .options-container {
   width: calc(100vw - 250px);
 }
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;

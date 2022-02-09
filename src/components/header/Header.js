@@ -20,9 +20,12 @@ function Header() {
         </div>
         <div className={classes["header-right"]}>
           <Button
-            width="180 px"
-            backgroundColor="rgba(70, 167, 183, 0.2)"
-            color="#00778a"
+            style={{
+              width: "11.25rem",
+              backgroundColor: "rgba(70, 167, 183, 0.2)",
+              color: "00778a",
+              height: "3rem",
+            }}
           >
             Join MedSearch
           </Button>

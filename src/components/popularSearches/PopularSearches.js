@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./PopularSearches.module.css";
-import button from "../UI/Button";
+import Button from "../UI/Button";
 import SpecialtyItem from "./specialties/SpecialtyItem";
 import HorizontalScrollbarComponent from "../horizontalScrollbar/HorizontalScrollbarComponent";
 
@@ -8,11 +8,45 @@ function PopularSearches({ specialtiesList }) {
   return (
     <div className={classes["popular-searches"]}>
       <div className={classes["buttons-container"]}>
-        <button className={`${classes.button} ${classes.active}`}>
+        <Button
+          style={{
+            color: `#fff`,
+            backgroundColor: `#ff7d19`,
+            width: `100%`,
+            height: `2.6rem`,
+            fontSize: `0.88rem`,
+            fontWeight: `400`,
+            borderRadius: `0`,
+          }}
+        >
           Specialties
-        </button>
-        <button className={classes.button}>Conditions</button>
-        <button className={classes.button}>Procedures</button>
+        </Button>
+        <Button
+          style={{
+            color: `#00`,
+            backgroundColor: `#fff`,
+            width: `100%`,
+            height: `2.6rem`,
+            fontSize: `0.88rem`,
+            fontWeight: `400`,
+            borderRadius: `0`,
+          }}
+        >
+          Conditions
+        </Button>
+        <Button
+          style={{
+            color: `#00`,
+            backgroundColor: `#fff`,
+            width: `100%`,
+            height: `2.6rem`,
+            fontSize: `0.88rem`,
+            fontWeight: `400`,
+            borderRadius: `0`,
+          }}
+        >
+          Procedures
+        </Button>
       </div>
       <HorizontalScrollbarComponent
         parentClass={classes["options-container"]}
