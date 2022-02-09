@@ -1,11 +1,12 @@
 .carousel-container {
   width: 100%;
+  margin-bottom: 3.29rem;
 }
 
 .blogs {
   display: flex;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-bottom: 6.64rem;
 }
 
 .center {

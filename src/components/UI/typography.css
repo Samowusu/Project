@@ -1,0 +1,37 @@
+.typography--variant-xxxl {
+  font-size: 2.88rem;
+  font-weight: 700;
+}
+
+.typography--variant-xxl {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.typography--variant-xl {
+  font-size: 1.13rem;
+  font-weight: 400;
+}
+
+.typography--variant-l {
+  font-size: 0.88rem;
+  font-weight: 400;
+}
+
+.typography--variant-m {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.typography--variant-s {
+  font-size: 0.56rem;
+  font-weight: 400;
+}
+
+.typography--color-primary {
+  color: #000;
+}
+
+.typography--color-secondary {
+  color: #fff;
+}

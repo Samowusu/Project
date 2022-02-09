@@ -1,12 +1,19 @@
 import React from "react";
-import classes from "./SearchButton.module.css";
 import SearchIcon from "../../assets/svgs/SearchIcon";
+import Button from "../UI/Button";
 
 function SearchButton() {
   return (
-    <button className={classes["search-button"]}>
+    <Button
+      style={{
+        backgroundColor: "#ff7d19",
+        borderRadius: "2px",
+        width: "3.75rem",
+        height: "3.38rem",
+      }}
+    >
       <SearchIcon width="20" height="20" color="white" />
-    </button>
+    </Button>
   );
 }
 

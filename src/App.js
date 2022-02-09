@@ -7,18 +7,19 @@ import Header from "./components/header/Header";
 import Doctors from "./components/doctors/Doctors";
 import Hospitals from "./components/hospitals/Hospitals";
 import Banner from "./components/banner/Banner";
-import Button from "./components/UI/Button";
+import HealthPartners from "./components/healthPartners/HealthPartners";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Button>Testing...</Button>
+
       <Search />
       <div className="doctors">
         <Doctors doctorsList={doctorsList} />
         <Hospitals hospitalsList={hospitalsList} />
       </div>
+      <HealthPartners />
       <Banner />
       <div className="container">
         <Blogs blogsList={blogsList} />
