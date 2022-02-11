@@ -1,35 +1,20 @@
 import React from "react";
 import classes from "./Header.module.css";
-import logo from "../../assets/images/logo.png";
-import Button from "../UI/Button";
+import NavBar from "./navigation/NavBar";
+import Search from "./search/Search";
+import Text from "../UI/Text";
 
 function Header() {
   return (
-    <div className={classes["header-main"]}>
-      <div className={classes["header-container"]}>
-        <div className={classes["header-left"]}>
-          <img src={logo} alt="MedSearch" />
-          <ul>
-            <li>Find Hospital</li>
-            <li>Find Doctor</li>
-            <li>Professional Network</li>
-            <li>FAQs</li>
-            <li>Strive2Thrive</li>
-            <li>Contact Us</li>
-          </ul>
+    <div className={classes["header"]}>
+      <NavBar />
+      <div className={classes["header-bottom"]}>
+        <div className={classes["text-container"]}>
+          <Text fontSize={"xxxl"} fontWeight="bolder" color={"#fff"}>
+            No wahala, search for a <br /> doctor near you
+          </Text>
         </div>
-        <div className={classes["header-right"]}>
-          <Button
-            style={{
-              width: "11.25rem",
-              backgroundColor: "rgba(70, 167, 183, 0.2)",
-              color: "00778a",
-              height: "3rem",
-            }}
-          >
-            Join MedSearch
-          </Button>
-        </div>
+        <Search />
       </div>
     </div>
   );

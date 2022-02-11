@@ -6,6 +6,7 @@ import doctor from "../../assets/images/doctor.png";
 import CalendarIcon from "../../assets/svgs/CalendarIcon";
 import HeartIcon from "../../assets/svgs/HeartIcon";
 import VerifiedIcon from "../../assets/svgs/VerifiedIcon";
+import TextComponent from "../UI/Text";
 DoctorProfile.defaultProps = {
   name: "Dr. Arkday Sheinin, MD",
   address: {
@@ -34,22 +35,35 @@ function DoctorProfile({
         >
           <VerifiedIcon className={classes.icon} />
         </div>
-        <h3>{name}</h3>
-        <div className={classes.address}>
-          <p>
-            {hospitalName ?? null}
-            {hospitalName ? <br /> : null}
-            {streetName ?? null}
-            {streetName ? <br /> : null}
-            {province}
-          </p>
+        <div className={classes.text}>
+          <TextComponent fontSize={"m"} fontWeight="bolder" textAlign={"start"}>
+            {name}
+          </TextComponent>
         </div>
-        <div className={classes["doctor-profile__bottom"]}>
-          <span className={classes.icons}>
-            <CalendarIcon />
-            <HeartIcon className={classes.icon} />
-          </span>
-          <h5>{specialty}</h5>
+        <div className={classes.wrapper}>
+          <div className={classes.address}>
+            <TextComponent
+              fontSize={"s"}
+              fontWeight="regular"
+              lineHeight={"0.81rem"}
+              textAlign="start"
+            >
+              {hospitalName ?? null}
+              {hospitalName ? <br /> : null}
+              {streetName ?? null}
+              {streetName ? <br /> : null}
+              {province}
+            </TextComponent>
+          </div>
+          <div className={classes["doctor-profile__bottom"]}>
+            <span className={classes.icons}>
+              <CalendarIcon />
+              <HeartIcon className={classes.icon} />
+            </span>
+            <TextComponent fontSize={"s"} fontWeight="bolder">
+              {specialty}
+            </TextComponent>
+          </div>
         </div>
       </div>
     </div>

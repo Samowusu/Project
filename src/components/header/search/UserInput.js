@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./UserInput.module.css";
-import BlackSearchIcon from "../../assets/svgs/BlackSearchIcon";
+import BlackSearchIcon from "../../../assets/svgs/BlackSearchIcon";
 
 function UserInput() {
   return (

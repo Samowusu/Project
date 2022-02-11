@@ -184,3 +184,46 @@ export const hospitalsList = [
     id: "h3",
   },
 ];
+
+export const footerLists = [
+  {
+    title: "For Patients",
+    list: [
+      "Account Sign Up/ Log in",
+      "Hospital Awards & Ratings",
+      "Quality & Reports",
+      "TeleHealth",
+      "Health Content A-Z",
+    ],
+  },
+  {
+    title: "For Providers",
+    list: [
+      "Provider Log In",
+      "Promote Your Practice",
+      "Update Your Free Profile",
+      "News and Features",
+      "Help Center",
+    ],
+  },
+  {
+    title: "For Partners",
+    list: [
+      "Client Log In",
+      "Advertise With Us",
+      "Virtual Point of Care Solutions",
+      "Advertise & Use Guidelines",
+    ],
+  },
+  {
+    title: "Our Company",
+    list: [
+      "Contact Us",
+      "About Us",
+      "Corporate",
+      "MedSearch FAQ",
+      "Strive2Thrive",
+      "Careers",
+    ],
+  },
+];

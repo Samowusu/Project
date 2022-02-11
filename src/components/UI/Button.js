@@ -12,6 +12,10 @@ ButtonComponent.defaultProps = {
     borderRadius: "4px",
     fontSize: "0.88rem",
     fontWeight: "700",
+    marginTop: "0",
+    marginBottom: "0",
+    marginLeft: "0",
+    marginRight: "0",
   },
 };
 

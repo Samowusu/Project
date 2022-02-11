@@ -1,27 +1,43 @@
 import React from "react";
 import classes from "./Hospitals.module.css";
 import DoctorProfile from "../doctors/DoctorProfile";
-import Card from "../UI/Card";
 import Button from "../UI/Button";
+import Container from "../UI/Container";
+import Text from "../UI/Text";
 
 function Hospitals({ hospitalsList }) {
   return (
-    <Card
-      button={
-        <Button color="#fff" backgroundColor=" #00778a" width="11.25rem">
-          All Hospitals
-        </Button>
-      }
+    <Container
+      style={{
+        flexDirection: "column",
+        width: "47%",
+        marginTop: "47px",
+      }}
     >
-      {hospitalsList.map((hospital) => (
-        <DoctorProfile
-          key={hospital.id}
-          name={hospital.name}
-          address={hospital.address}
-          image={hospital.image}
-        />
-      ))}
-    </Card>
+      {" "}
+      <Text fontSize={"xl"} fontWeight="light">
+        HOSPITALS
+      </Text>
+      <Container
+        style={{
+          width: "100%",
+          justifyContent: "space-between",
+          marginBottom: "31px",
+        }}
+      >
+        {hospitalsList.map((hospital) => (
+          <DoctorProfile
+            key={hospital.id}
+            name={hospital.name}
+            address={hospital.address}
+            image={hospital.image}
+          />
+        ))}
+      </Container>
+      <Button color="#fff" backgroundColor=" #00778a" width="11.25rem">
+        All Hospitals
+      </Button>
+    </Container>
   );
 }
 

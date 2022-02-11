@@ -1,0 +1,44 @@
+.navBar-main {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: #fff;
+  padding: 7px 0;
+}
+
+.navBar-container {
+  display: flex;
+  justify-content: space-between;
+  width: 94%;
+}
+
+.navBar-container .navBar-left {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.navBar-left img {
+  width: 16%;
+  margin-right: 40px;
+}
+
+.navBar-left ul {
+  list-style: none;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navBar-left ul > li {
+  font-size: var(--l);
+  font-weight: 400;
+  color: #000000;
+  cursor: pointer;
+}
+
+.button {
+  color: #00778a;
+  background: rgba(70, 167, 183, 0.2);
+}

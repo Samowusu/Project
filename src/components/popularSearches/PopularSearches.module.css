@@ -1,17 +1,15 @@
 .popular-searches {
   display: flex;
-  width: 100%;
-  margin-top: 6.25rem;
+  /* margin: 87px 0 87px 94px; */
 }
 
 .buttons-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 11.31rem;
   width: 8.06rem;
   border-right: 2px solid rgba(255, 125, 25, 0.4);
-  margin: 10px 4.63rem 0 0;
+  margin-right: 4.63rem;
 }
 
 .button {
@@ -34,7 +32,7 @@
 }
 
 .options-container {
-  width: calc(100vw - 250px);
+  width: calc(100vw - 330px);
 }
 
 /* width */

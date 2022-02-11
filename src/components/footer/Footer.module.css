@@ -1,0 +1,34 @@
+.footer {
+  width: 100%;
+  background: #00778a;
+  padding: 6.13rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer .container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .wrapper {
+  width: 100%;
+  height: 31%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.container .wrapper img {
+  width: 38%;
+  height: 100%;
+}
+
+.container .wrapper .socials {
+  width: 160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

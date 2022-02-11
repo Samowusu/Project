@@ -1,6 +1,6 @@
 import React from "react";
-import SearchIcon from "../../assets/svgs/SearchIcon";
-import Button from "../UI/Button";
+import SearchIcon from "../../../assets/svgs/SearchIcon";
+import Button from "../../UI/Button";
 
 function SearchButton() {
   return (

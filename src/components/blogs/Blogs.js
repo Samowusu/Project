@@ -4,6 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import BlogItem from "./BlogItem";
 import classes from "./Blogs.module.css";
 import Button from "../UI/Button";
+import Container from "../UI/Container";
 
 Blogs.defaultProps = {
   blogsList: [],
@@ -24,7 +25,7 @@ function Blogs({ blogsList, itemsPerSlide, justifyContent }) {
   }, [blogsList, itemsPerSlide]);
 
   return (
-    <>
+    <Container style={{ flexDirection: "column" }}>
       <div className={classes["carousel-container"]}>
         <Carousel showThumbs={false} showArrows={false} showStatus={false}>
           {updatedBlogsList.map((chunk, index) => (
@@ -45,7 +46,7 @@ function Blogs({ blogsList, itemsPerSlide, justifyContent }) {
         </Carousel>
       </div>
       <Button>More Posts</Button>
-    </>
+    </Container>
   );
 }
 

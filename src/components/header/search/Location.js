@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Location.module.css";
-import LocationIcon from "../../assets/svgs/LocationIcon";
+import LocationIcon from "../../../assets/svgs/LocationIcon";
 
 function Location() {
   return (
