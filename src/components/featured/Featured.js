@@ -24,6 +24,7 @@ function Featured({ doctorsList, hospitalsList }) {
         }}
       >
         <Doctors doctorsList={doctorsList} />
+        <div className="vertical-line"></div>
         <Hospitals hospitalsList={hospitalsList} />
       </Container>
     </Container>
