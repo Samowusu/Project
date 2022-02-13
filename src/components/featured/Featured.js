@@ -15,7 +15,8 @@ function Featured({ doctorsList, hospitalsList }) {
     >
       <Text fontSize={"xxl"} fontWeight="bolder" lineHeight={"3rem"}>
         You’re a click away from a <br />
-        <a href="#">Doctor</a> or <a href="#">Hospital</a>
+        <button className="underline">Doctor</button> or{" "}
+        <button className="underline">Hospital</button>
       </Text>
       <Container
         style={{
