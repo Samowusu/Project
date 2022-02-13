@@ -1,5 +1,4 @@
 import React from "react";
-import classes from "./Doctors.module.css";
 import DoctorProfile from "./DoctorProfile";
 import Button from "../../UI/Button";
 import Text from "../../UI/Text";

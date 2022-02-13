@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
+import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import useDrag from "../../hooks/useDrag";
 
 function HorizontalScrollbarComponent({ RenderItemsList, parentClass }) {

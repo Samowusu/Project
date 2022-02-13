@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Button } from "./Button-styles";
 
 ButtonComponent.defaultProps = {

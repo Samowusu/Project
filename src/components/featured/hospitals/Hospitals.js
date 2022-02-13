@@ -1,5 +1,4 @@
 import React from "react";
-import classes from "./Hospitals.module.css";
 import DoctorProfile from "../doctors/DoctorProfile";
 import Button from "../../UI/Button";
 import Container from "../../UI/Container";
