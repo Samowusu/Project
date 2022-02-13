@@ -1,12 +1,12 @@
 import React from "react";
 import classes from "./DoctorProfile.module.css";
 
-import doctor from "../../assets/images/doctor.png";
+import doctor from "../../../assets/images/doctor.png";
 
-import CalendarIcon from "../../assets/svgs/CalendarIcon";
-import HeartIcon from "../../assets/svgs/HeartIcon";
-import VerifiedIcon from "../../assets/svgs/VerifiedIcon";
-import TextComponent from "../UI/Text";
+import CalendarIcon from "../../../assets/svgs/CalendarIcon";
+import HeartIcon from "../../../assets/svgs/HeartIcon";
+import VerifiedIcon from "../../../assets/svgs/VerifiedIcon";
+import TextComponent from "../../UI/Text";
 DoctorProfile.defaultProps = {
   name: "Dr. Arkday Sheinin, MD",
   address: {

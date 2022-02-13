@@ -1,9 +1,9 @@
 import React from "react";
 import classes from "./Doctors.module.css";
 import DoctorProfile from "./DoctorProfile";
-import Button from "../UI/Button";
-import Text from "../UI/Text";
-import Container from "../UI/Container";
+import Button from "../../UI/Button";
+import Text from "../../UI/Text";
+import Container from "../../UI/Container";
 
 function Doctors({ doctorsList }) {
   return (

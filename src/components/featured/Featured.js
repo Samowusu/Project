@@ -1,6 +1,6 @@
 import React from "react";
-import Doctors from "../doctors/Doctors";
-import Hospitals from "../hospitals/Hospitals";
+import Doctors from "./doctors/Doctors";
+import Hospitals from "./hospitals/Hospitals";
 import Container from "../UI/Container";
 import Text from "../UI/Text";
 
