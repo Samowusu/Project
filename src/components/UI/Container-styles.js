@@ -15,4 +15,7 @@ export const Container = styled.div`
   padding-bottom: ${(props) => props.$styles.paddingBottom};
   padding-right: ${(props) => props.$styles.paddingRight};
   padding-left: ${(props) => props.$styles.paddingLeft};
+  border-top-color: ${(props) => props.$styles.borderTopColor};
+  border-top-style: ${(props) => props.$styles.borderTopStyle};
+  border-top-width: ${(props) => props.$styles.borderTopWidth};
 `;

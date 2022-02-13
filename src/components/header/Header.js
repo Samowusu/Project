@@ -10,7 +10,12 @@ function Header() {
       <NavBar />
       <div className={classes["header-bottom"]}>
         <div className={classes["text-container"]}>
-          <Text fontSize={"xxxl"} fontWeight="bolder" color={"#fff"}>
+          <Text
+            fontSize={"xxxl"}
+            fontWeight="bolder"
+            color={"#fff"}
+            textAlign="start"
+          >
             No wahala, search for a <br /> doctor near you
           </Text>
         </div>

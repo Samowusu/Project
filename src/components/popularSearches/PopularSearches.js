@@ -4,6 +4,7 @@ import Button from "../UI/Button";
 import SpecialtyItem from "./specialties/SpecialtyItem";
 import HorizontalScrollbarComponent from "../horizontalScrollbar/HorizontalScrollbarComponent";
 import Container from "../UI/Container";
+import Text from "../UI/Text";
 
 function PopularSearches({ specialtiesList }) {
   return (
@@ -21,6 +22,9 @@ function PopularSearches({ specialtiesList }) {
           alignItems: "flex-start",
         }}
       >
+        <Text fontSize={"xxl"} fontWeight="bolder" marginBottom={"49px"}>
+          Popular Searches on MedSearch
+        </Text>
         <div className={classes["popular-searches"]}>
           <div className={classes["buttons-container"]}>
             <Button
@@ -77,7 +81,7 @@ function PopularSearches({ specialtiesList }) {
             }}
           />
         </div>
-        <Button style={{ marginLeft: "180px", marginTop: "49px" }}>
+        <Button style={{ marginLeft: "12.5rem", marginTop: "49px" }}>
           View More Specialties
         </Button>
       </Container>

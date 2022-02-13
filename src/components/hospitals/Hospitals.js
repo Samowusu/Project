@@ -23,6 +23,7 @@ function Hospitals({ hospitalsList }) {
           width: "100%",
           justifyContent: "space-between",
           marginBottom: "31px",
+          marginTop: "29px",
         }}
       >
         {hospitalsList.map((hospital) => (

@@ -3,7 +3,8 @@
   background: #00778a;
   padding: 6.13rem 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer .container {

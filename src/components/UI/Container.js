@@ -5,7 +5,7 @@ ContainerComponent.defaultProps = {
   children: "",
   style: {
     width: "100%",
-    backgroundColor: "#fff",
+    backgroundColor: "transparent",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
@@ -17,6 +17,9 @@ ContainerComponent.defaultProps = {
     paddingBottom: "0",
     paddingRight: "0",
     paddingLeft: "0",
+    borderTopWidth: "0",
+    borderTopColor: "transparent",
+    borderTopStyle: "none",
   },
 };
 

@@ -24,6 +24,7 @@ function TextComponent({
   fontWeight,
   lineHeight,
   textAlign,
+  marginBottom,
 }) {
   return (
     <Text
@@ -32,6 +33,7 @@ function TextComponent({
       $fontWeight={fontWeight ? fontWeightMapping[fontWeight] : "400"}
       $lineHeight={lineHeight}
       $textAlign={textAlign}
+      $marginBottom={marginBottom}
     >
       {children}
     </Text>

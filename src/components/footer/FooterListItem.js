@@ -6,17 +6,22 @@ function FooterListItem({ title, listItems }) {
   return (
     <div className={classes.container}>
       <div className={classes.title}>
-        <Text fontSize={"m"} fontWeight="bold" color={"#fff"}>
+        <Text fontSize={"m"} fontWeight="bold" color={"#fff"} textAlign="start">
           {title}
         </Text>
       </div>
-      <div className={classes.contents}>
-        {listItems.map((item, index) => (
-          <Text key={index} color="#fff" fontSize={"m"} fontWeight="light">
-            {item}
-          </Text>
-        ))}
-      </div>
+      {listItems.map((item, index) => (
+        <Text
+          key={index}
+          color="#fff"
+          fontSize={"m"}
+          fontWeight="light"
+          textAlign="start"
+          marginBottom={"8px"}
+        >
+          {item}
+        </Text>
+      ))}
     </div>
   );
 }

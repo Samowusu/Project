@@ -5,15 +5,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
-  padding: 1.25rem 2.5rem 1.25rem 1.25rem;
+  padding: 1.25rem;
   width: 19.44rem;
   height: 13.69rem;
   border-radius: 12px;
-  margin-right: 10px;
-  text-align: left;
+  margin-right: 1.09rem;
 }
 
-.blog-item p {
+/* .blog-item p {
   font-size: var(--m);
   font-weight: 400;
   margin-bottom: 0.63rem;
@@ -23,4 +22,4 @@
   font-size: var(--xl);
   font-weight: 700;
   line-height: 1.69rem;
-}
+} */

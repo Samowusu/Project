@@ -4,6 +4,8 @@
   justify-content: center;
   background-color: #fff;
   padding: 7px 0;
+  /* position: fixed;
+  z-index: 100; */
 }
 
 .navBar-container {

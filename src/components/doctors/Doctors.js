@@ -22,6 +22,7 @@ function Doctors({ doctorsList }) {
           width: "100%",
           justifyContent: "space-between",
           marginBottom: "31px",
+          marginTop: "29px",
         }}
       >
         {doctorsList.map((doctor) => (
