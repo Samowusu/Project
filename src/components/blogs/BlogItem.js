@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./BlogItem.module.css";
 import blogImage from "../../assets/images/blog.png";
-import Text from "../UI/Text";
+import Typography from "../UI/Typography";
 
 BlogItem.defaultProps = {
   date: "Sat Apr 03 2021",
@@ -15,9 +15,7 @@ function BlogItem({ date, title, image }) {
       className={classes["blog-item"]}
       style={{ backgroundImage: `url(${image})` }}
     >
-      {/* <p>{date}</p>
-      <h2>{title}</h2> */}
-      <Text
+      <Typography
         fontSize={"m"}
         fontWeight="regular"
         marginBottom={"0.63rem"}
@@ -25,8 +23,8 @@ function BlogItem({ date, title, image }) {
         textAlign={"start"}
       >
         {date}
-      </Text>
-      <Text
+      </Typography>
+      <Typography
         fontSize={"xl"}
         fontWeight="bolder"
         lineHeight={"1.69rem"}
@@ -34,7 +32,7 @@ function BlogItem({ date, title, image }) {
         textAlign={"start"}
       >
         {title}
-      </Text>
+      </Typography>
     </div>
   );
 }

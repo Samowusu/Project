@@ -1,17 +1,22 @@
 import React from "react";
 import classes from "./FooterListItem.module.css";
-import Text from "../UI/Text";
+import Typography from "../UI/Typography";
 
 function FooterListItem({ title, listItems }) {
   return (
     <div className={classes.container}>
       <div className={classes.title}>
-        <Text fontSize={"m"} fontWeight="bold" color={"#fff"} textAlign="start">
+        <Typography
+          fontSize={"m"}
+          fontWeight="bold"
+          color={"#fff"}
+          textAlign="start"
+        >
           {title}
-        </Text>
+        </Typography>
       </div>
       {listItems.map((item, index) => (
-        <Text
+        <Typography
           key={index}
           color="#fff"
           fontSize={"m"}
@@ -20,7 +25,7 @@ function FooterListItem({ title, listItems }) {
           marginBottom={"8px"}
         >
           {item}
-        </Text>
+        </Typography>
       ))}
     </div>
   );

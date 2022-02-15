@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "./Text-styles";
+import { Typography } from "./Typography-styles";
 
 const fontSizeMapping = {
   xxxl: "2.88rem",
@@ -27,7 +27,7 @@ function TextComponent({
   marginBottom,
 }) {
   return (
-    <Text
+    <Typography
       $fontSize={fontSize ? fontSizeMapping[fontSize] : "0.56rem"}
       $color={color}
       $fontWeight={fontWeight ? fontWeightMapping[fontWeight] : "400"}
@@ -36,7 +36,7 @@ function TextComponent({
       $marginBottom={marginBottom}
     >
       {children}
-    </Text>
+    </Typography>
   );
 }
 

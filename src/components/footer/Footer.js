@@ -7,7 +7,7 @@ import Instagram from "../../assets/svgs/Instagram";
 import LinkedIn from "../../assets/svgs/LinkedIn";
 import YouTube from "../../assets/svgs/YouTube";
 import Container from "../UI/Container";
-import Text from "../UI/Text";
+import Typography from "../UI/Typography";
 
 function Footer() {
   return (
@@ -38,13 +38,13 @@ function Footer() {
           marginTop: "99px",
         }}
       >
-        <Text color={"#ffffff"} fontSize="m" fontWeight={"regular"}>
+        <Typography color={"#ffffff"} fontSize="m" fontWeight={"regular"}>
           © Copyright 2021 MedHall
-        </Text>
-        <Text color={"#ffffff"} fontSize="m" fontWeight={"regular"}>
+        </Typography>
+        <Typography color={"#ffffff"} fontSize="m" fontWeight={"regular"}>
           Privacy Policy | Advertising Policy | Policy Preferences | Do Not Sell
           My Personal Information
-        </Text>
+        </Typography>
       </Container>
     </div>
   );

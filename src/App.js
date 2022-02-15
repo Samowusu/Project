@@ -7,7 +7,10 @@ import Banner from "./components/banner/Banner";
 import HealthPartners from "./components/healthPartners/HealthPartners";
 import Footer from "./components/footer/Footer";
 import Featured from "./components/featured/Featured";
+import Glossary from "./components/glossary/Glossary";
+
 function App() {
+  return <Glossary />;
   return (
     <div className="App">
       <Header />

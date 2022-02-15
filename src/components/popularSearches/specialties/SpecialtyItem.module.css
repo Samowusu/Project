@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  width: 11.31rem;
   min-width: 11.31rem;
   height: 11.31rem;
   background-color: #fff;
@@ -13,9 +14,4 @@
 .specialty-item img {
   width: 5.19rem;
   height: 5.19rem;
-}
-
-.specialty-item h3 {
-  font-size: 1rem;
-  font-weight: 700;
 }

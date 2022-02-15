@@ -22,7 +22,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fff;
 }
 
 code {
@@ -38,6 +37,14 @@ code {
   font-size: 2rem;
   font-weight: 700;
   cursor: pointer;
+}
+
+.glossary {
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
 }
 
 @media (max-width: 1200px) {

@@ -4,7 +4,7 @@ import Button from "../UI/Button";
 import SpecialtyItem from "./specialties/SpecialtyItem";
 import HorizontalScrollbarComponent from "../horizontalScrollbar/HorizontalScrollbarComponent";
 import Container from "../UI/Container";
-import Text from "../UI/Text";
+import Typography from "../UI/Typography";
 
 function PopularSearches({ specialtiesList }) {
   return (
@@ -22,9 +22,9 @@ function PopularSearches({ specialtiesList }) {
           alignItems: "flex-start",
         }}
       >
-        <Text fontSize={"xxl"} fontWeight="bolder" marginBottom={"49px"}>
+        <Typography fontSize={"xxl"} fontWeight="bolder" marginBottom={"49px"}>
           Popular Searches on MedSearch
-        </Text>
+        </Typography>
         <div className={classes["popular-searches"]}>
           <div className={classes["buttons-container"]}>
             <Button

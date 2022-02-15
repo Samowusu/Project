@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./Header.module.css";
 import NavBar from "./navigation/NavBar";
 import Search from "./search/Search";
-import Text from "../UI/Text";
+import Typography from "../UI/Typography";
 
 function Header() {
   return (
@@ -10,14 +10,14 @@ function Header() {
       <NavBar />
       <div className={classes["header-bottom"]}>
         <div className={classes["text-container"]}>
-          <Text
+          <Typography
             fontSize={"xxxl"}
             fontWeight="bolder"
             color={"#fff"}
             textAlign="start"
           >
             No wahala, search for a <br /> doctor near you
-          </Text>
+          </Typography>
         </div>
         <Search />
       </div>

@@ -1,11 +1,11 @@
 .vertical-line {
   border: 1px solid #e5e5e5;
-  margin-top: 47px;
   height: 21.94rem;
+  margin: 0 30px;
 }
 
 .carousel .control-dots .dot {
-  background-color: #c4c4c4;
+  background: #c4c4c4;
 }
 
 .carousel .control-dots .dot.selected {

@@ -1,13 +1,13 @@
 import React from "react";
-import classes from "./DoctorProfile.module.css";
+import classes from "./ProfileCard.module.css";
 
-import doctor from "../../../assets/images/doctor.png";
+import doctor from "../../assets/images/doctor.png";
 
-import CalendarIcon from "../../../assets/svgs/CalendarIcon";
-import HeartIcon from "../../../assets/svgs/HeartIcon";
-import VerifiedIcon from "../../../assets/svgs/VerifiedIcon";
-import TextComponent from "../../UI/Text";
-DoctorProfile.defaultProps = {
+import CalendarIcon from "../../assets/svgs/CalendarIcon";
+import HeartIcon from "../../assets/svgs/HeartIcon";
+import VerifiedIcon from "../../assets/svgs/VerifiedIcon";
+import Typography from "./Typography";
+ProfileCard.defaultProps = {
   name: "Dr. Arkday Sheinin, MD",
   address: {
     streetName: "",
@@ -19,7 +19,7 @@ DoctorProfile.defaultProps = {
   specialty: "",
 };
 
-function DoctorProfile({
+function ProfileCard({
   name,
   address: { streetName, hospitalName, province },
   image,
@@ -27,8 +27,8 @@ function DoctorProfile({
   specialty,
 }) {
   return (
-    <div className={classes["doctor-profile"]}>
-      <div className={classes["doctor-profile__container"]}>
+    <div className={classes["profile-card"]}>
+      <div className={classes["profile-card__container"]}>
         <div
           className={classes.image}
           style={{ backgroundImage: `url(${image})` }}
@@ -36,13 +36,13 @@ function DoctorProfile({
           <VerifiedIcon className={classes.icon} />
         </div>
         <div className={classes.text}>
-          <TextComponent fontSize={"m"} fontWeight="bolder" textAlign={"start"}>
+          <Typography fontSize={"m"} fontWeight="bolder" textAlign={"start"}>
             {name}
-          </TextComponent>
+          </Typography>
         </div>
         <div className={classes.wrapper}>
           <div className={classes.address}>
-            <TextComponent
+            <Typography
               fontSize={"s"}
               fontWeight="regular"
               lineHeight={"0.81rem"}
@@ -53,16 +53,16 @@ function DoctorProfile({
               {streetName ?? null}
               {streetName ? <br /> : null}
               {province}
-            </TextComponent>
+            </Typography>
           </div>
-          <div className={classes["doctor-profile__bottom"]}>
+          <div className={classes["profile-card__bottom"]}>
             <span className={classes.icons}>
               <CalendarIcon />
               <HeartIcon className={classes.icon} />
             </span>
-            <TextComponent fontSize={"s"} fontWeight="bolder">
+            <Typography fontSize={"s"} fontWeight="bolder">
               {specialty}
-            </TextComponent>
+            </Typography>
           </div>
         </div>
       </div>
@@ -70,4 +70,4 @@ function DoctorProfile({
   );
 }
 
-export default DoctorProfile;
+export default ProfileCard;

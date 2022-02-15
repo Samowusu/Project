@@ -1,7 +1,7 @@
 import React from "react";
-import DoctorProfile from "./DoctorProfile";
+import ProfileCard from "../../UI/ProfileCard";
 import Button from "../../UI/Button";
-import Text from "../../UI/Text";
+import Typography from "../../UI/Typography";
 import Container from "../../UI/Container";
 
 function Doctors({ doctorsList }) {
@@ -10,12 +10,12 @@ function Doctors({ doctorsList }) {
       style={{
         flexDirection: "column",
         width: "47%",
-        marginTop: "47px",
+        maxWidth: "604px",
       }}
     >
-      <Text fontSize={"xl"} fontWeight="light">
+      <Typography fontSize={"xl"} fontWeight="light">
         DOCTORS
-      </Text>
+      </Typography>
       <Container
         style={{
           width: "100%",
@@ -25,7 +25,7 @@ function Doctors({ doctorsList }) {
         }}
       >
         {doctorsList.map((doctor) => (
-          <DoctorProfile
+          <ProfileCard
             key={doctor.id}
             name={doctor.name}
             address={doctor.address}

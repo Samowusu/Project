@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./HealthPartners.module.css";
 import healthPartners from "../../assets/images/healthPartners.png";
-import Text from "../UI/Text";
+import Typography from "../UI/Typography";
 import Button from "../UI/Button";
 import Container from "../UI/Container";
 
@@ -11,7 +11,7 @@ function HealthPartners() {
       <div className={classes.container}>
         <div className={classes["container-left"]}>
           <div className={classes["text-container"]}>
-            <Text
+            <Typography
               fontSize="xxl"
               fontWeight="bolder"
               lineHeight={"3rem"}
@@ -19,15 +19,15 @@ function HealthPartners() {
               marginBottom={"28px"}
             >
               Trusted by Ghana’s leading health partners
-            </Text>
-            <Text
+            </Typography>
+            <Typography
               fontSize="xl"
               fontWeight="regular"
               lineHeight={"1.53rem"}
               textAlign="start"
             >
               We work with the most trusted health partners in Ghana
-            </Text>
+            </Typography>
           </div>
           <Button
             style={{

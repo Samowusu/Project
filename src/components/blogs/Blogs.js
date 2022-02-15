@@ -5,11 +5,29 @@ import BlogItem from "./BlogItem";
 import classes from "./Blogs.module.css";
 import Button from "../UI/Button";
 import Container from "../UI/Container";
+import styled from "styled-components";
 
 Blogs.defaultProps = {
   blogsList: [],
   itemsPerSlide: 4,
   justifyContent: "center",
+};
+const CarouselIndicator = (onClickHandler, isSelected, index, label) => {
+  console.log({ label, isSelected });
+
+  return (
+    <Indicator
+      selected={isSelected}
+      onClick={onClickHandler}
+      onKeyDown={onClickHandler}
+      value={index}
+      key={index}
+      role="button"
+      tabIndex={0}
+      title={`${label} ${index + 1}`}
+      aria-label={`${label} ${index + 1}`}
+    />
+  );
 };
 
 function Blogs({ blogsList, itemsPerSlide, justifyContent }) {
@@ -27,7 +45,16 @@ function Blogs({ blogsList, itemsPerSlide, justifyContent }) {
   return (
     <Container style={{ flexDirection: "column" }}>
       <div className={classes["carousel-container"]}>
-        <Carousel showThumbs={false} showArrows={false} showStatus={false}>
+        <Carousel
+          showThumbs={false}
+          showArrows={false}
+          showStatus={false}
+          autoPlay={true}
+          infiniteLoop={true}
+          interval={2000}
+          autoFocus={true}
+          renderIndicator={CarouselIndicator}
+        >
           {updatedBlogsList.map((chunk, index) => (
             <div
               key={index}
@@ -49,5 +76,15 @@ function Blogs({ blogsList, itemsPerSlide, justifyContent }) {
     </Container>
   );
 }
+
+const Indicator = styled.li`
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: ${(props) => (props.selected ? "#f87537" : "#c4c4c4")};
+  display: inline-block;
+  margin: 0 8px;
+  cursor: pointer;
+`;
 
 export default Blogs;

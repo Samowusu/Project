@@ -2,7 +2,7 @@ import React from "react";
 import Doctors from "./doctors/Doctors";
 import Hospitals from "./hospitals/Hospitals";
 import Container from "../UI/Container";
-import Text from "../UI/Text";
+import Typography from "../UI/Typography";
 
 function Featured({ doctorsList, hospitalsList }) {
   return (
@@ -13,15 +13,16 @@ function Featured({ doctorsList, hospitalsList }) {
         flexDirection: "column",
       }}
     >
-      <Text fontSize={"xxl"} fontWeight="bolder" lineHeight={"3rem"}>
+      <Typography fontSize={"xxl"} fontWeight="bolder" lineHeight={"3rem"}>
         You’re a click away from a <br />
         <button className="underline">Doctor</button> or{" "}
         <button className="underline">Hospital</button>
-      </Text>
+      </Typography>
       <Container
         style={{
-          width: "86%",
-          justifyContent: "space-between",
+          width: "100%",
+          justifyContent: "center",
+          marginTop: "47px",
         }}
       >
         <Doctors doctorsList={doctorsList} />

@@ -20,6 +20,7 @@ ContainerComponent.defaultProps = {
     borderTopWidth: "0",
     borderTopColor: "transparent",
     borderTopStyle: "none",
+    maxWidth: "none",
   },
 };
 
