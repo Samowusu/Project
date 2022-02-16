@@ -1,9 +1,0 @@
-.button {
-  border: none;
-  cursor: pointer;
-  height: 3rem;
-  font-size: var(--l);
-  font-weight: 700;
-  border-radius: 4px;
-  text-align: center;
-}

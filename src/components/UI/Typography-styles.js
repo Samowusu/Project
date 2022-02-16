@@ -7,4 +7,5 @@ export const Typography = styled.p`
   line-height: ${(props) => props.$lineHeight};
   text-align: ${(props) => props.$textAlign ?? "center"};
   margin-bottom: ${(props) => props.$marginBottom ?? 0};
+  margin-left: ${(props) => props.$marginLeft ?? 0};
 `;

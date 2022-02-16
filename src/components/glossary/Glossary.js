@@ -1,15 +1,22 @@
 import React from "react";
+
+// components
 import DoctorProfile from "../UI/ProfileCard";
 import Search from "../header/search/Search";
 import Button from "../UI/Button";
+import Typography from "../UI/Typography";
+import Blogs from "../blogs/Blogs";
+import BlogItem from "../blogs/BlogItem";
+import SpecialtyItem from "../popularSearches/specialties/SpecialtyItem";
+import HorizontalScrollbarComponent from "../horizontalScrollbar/HorizontalScrollbarComponent";
+
+// data
+import { blogsList, specialtiesList } from "../../Data";
+
+// images
 import doctor from "../../assets/images/doctor.png";
 import blog from "../../assets/images/blog.png";
 import item from "../../assets/images/item.png";
-import Typography from "../UI/Typography";
-import BlogItem from "../blogs/BlogItem";
-import SpecialtyItem from "../popularSearches/specialties/SpecialtyItem";
-import { blogsList } from "../../Data";
-import Blogs from "../blogs/Blogs";
 
 function Glossary() {
   return (
@@ -24,6 +31,7 @@ function Glossary() {
         }}
         image={doctor}
         specialty="Love Doctor"
+        isVerified={true}
       />
       <Search />
       <Button onClick={() => {}} style={{ backgroundColor: "#ff7d19" }}>
@@ -52,6 +60,19 @@ function Glossary() {
       <Blogs blogsList={blogsList} />
 
       <SpecialtyItem title="Optometry" image={item} onClick={() => {}} />
+      <HorizontalScrollbarComponent
+        parentClass="scrollContainer"
+        RenderItemsList={(clickHandler) => {
+          return specialtiesList.map((item, index) => (
+            <SpecialtyItem
+              title={item.title}
+              image={item.image}
+              key={index}
+              onClick={() => clickHandler(() => console.log({ index }))}
+            />
+          ));
+        }}
+      />
     </div>
   );
 }

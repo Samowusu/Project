@@ -24,22 +24,29 @@
   position: relative;
 }
 
-.profile-card__container .image .icon {
-  position: absolute;
-  right: 5px;
-  bottom: 5px;
+.profile-card__container .text-icon__container {
+  display: flex;
+  margin-bottom: 0.42rem;
 }
 
-.profile-card__container .text {
-  margin-bottom: 0.42rem;
+.profile-card__container .text-icon__container .text {
   word-break: break-word;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  line-height: 16px; /* fallback */
-  max-height: 15px; /* fallback */
-  -webkit-line-clamp: 1; /* number of lines to show */
+  line-height: 16px;
+  max-height: 15px;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  position: relative;
+}
+
+.profile-card__container .text-icon__container .icon {
+  width: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile-card__container .wrapper {

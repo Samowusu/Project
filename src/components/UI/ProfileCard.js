@@ -17,6 +17,7 @@ ProfileCard.defaultProps = {
   image: doctor,
   id: "A1",
   specialty: "",
+  isVerified: true,
 };
 
 function ProfileCard({
@@ -25,6 +26,7 @@ function ProfileCard({
   image,
   id,
   specialty,
+  isVerified,
 }) {
   return (
     <div className={classes["profile-card"]}>
@@ -32,13 +34,16 @@ function ProfileCard({
         <div
           className={classes.image}
           style={{ backgroundImage: `url(${image})` }}
-        >
-          <VerifiedIcon className={classes.icon} />
-        </div>
-        <div className={classes.text}>
-          <Typography fontSize={"m"} fontWeight="bolder" textAlign={"start"}>
-            {name}
-          </Typography>
+        />
+        <div className={classes["text-icon__container"]}>
+          <div className={classes.text}>
+            <Typography fontSize={"m"} fontWeight="bolder" textAlign={"start"}>
+              {name}
+            </Typography>
+          </div>
+          <div className={classes.icon}>
+            {isVerified ? <VerifiedIcon /> : ""}
+          </div>
         </div>
         <div className={classes.wrapper}>
           <div className={classes.address}>

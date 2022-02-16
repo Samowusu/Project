@@ -1,16 +1,16 @@
 import React from "react";
-import classes from "./Search.module.css";
 import UserInput from "./UserInput";
 import Location from "./Location";
 import SearchButton from "./SearchButton";
+import SearchComponent from "./Search-styles";
 
-function Search() {
+function Search({ width }) {
   return (
-    <div className={classes.search}>
+    <SearchComponent width={width}>
       <UserInput />
       <Location />
       <SearchButton />
-    </div>
+    </SearchComponent>
   );
 }
 

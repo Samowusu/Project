@@ -47,6 +47,9 @@ code {
   gap: 20px;
 }
 
+.scrollContainer {
+  width: calc(100vw-330px);
+}
 @media (max-width: 1200px) {
   html {
     font-size: 12px;

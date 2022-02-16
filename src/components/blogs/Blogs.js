@@ -13,8 +13,6 @@ Blogs.defaultProps = {
   justifyContent: "center",
 };
 const CarouselIndicator = (onClickHandler, isSelected, index, label) => {
-  console.log({ label, isSelected });
-
   return (
     <Indicator
       selected={isSelected}

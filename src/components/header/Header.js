@@ -1,27 +1,33 @@
 import React from "react";
-import classes from "./Header.module.css";
+import header from "../../assets/images/header.png";
 import NavBar from "./navigation/NavBar";
 import Search from "./search/Search";
 import Typography from "../UI/Typography";
+import Container from "../UI/Container";
+import HeaderBottom from "./Header-styles";
 
 function Header() {
   return (
-    <div className={classes["header"]}>
+    <Container style={{ flexDirection: "column" }}>
       <NavBar />
-      <div className={classes["header-bottom"]}>
-        <div className={classes["text-container"]}>
-          <Typography
-            fontSize={"xxxl"}
-            fontWeight="bolder"
-            color={"#fff"}
-            textAlign="start"
-          >
-            No wahala, search for a <br /> doctor near you
-          </Typography>
-        </div>
-        <Search />
-      </div>
-    </div>
+      <HeaderBottom
+        img={header}
+        paddingTop="12.94rem"
+        paddingBottom="16.25rem"
+        paddingLeft={"3.5rem"}
+      >
+        <Typography
+          fontSize={"xxxl"}
+          fontWeight="bolder"
+          color={"#fff"}
+          textAlign="start"
+          marginBottom={"2.69rem"}
+        >
+          No wahala, search for a <br /> doctor near you
+        </Typography>
+        <Search width={"40.69rem"} />
+      </HeaderBottom>
+    </Container>
   );
 }
 
