@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // components
 import DoctorProfile from "../UI/ProfileCard";
@@ -11,16 +11,32 @@ import SpecialtyItem from "../popularSearches/specialties/SpecialtyItem";
 import HorizontalScrollbarComponent from "../horizontalScrollbar/HorizontalScrollbarComponent";
 
 // data
-import { blogsList, specialtiesList } from "../../Data";
+import { blogsList, specialtiesList, radioButtonItems } from "../../Data";
 
 // images
 import doctor from "../../assets/images/doctor.png";
 import blog from "../../assets/images/blog.png";
 import item from "../../assets/images/item.png";
+import RadioButton from "../UI/RadioButton";
 
 function Glossary() {
+  const [select, setSelect] = useState("optionA");
+
+  const handleSelectChange = (event) => {
+    const value = event.target.value;
+    setSelect(value);
+  };
+
   return (
     <div className="glossary">
+      {radioButtonItems.map((item) => (
+        <RadioButton
+          onChange={handleSelectChange}
+          select={select}
+          title={item.title}
+          value={item.value}
+        />
+      ))}
       <DoctorProfile
         key="D1"
         name="Dr. Yvw Bimpong"

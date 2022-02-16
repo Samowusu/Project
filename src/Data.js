@@ -227,3 +227,9 @@ export const footerLists = [
     ],
   },
 ];
+
+export const radioButtonItems = [
+  { value: "optionA", title: "Most relevant" },
+  { value: "optionB", title: "Closest" },
+  { value: "optionC", title: "Highest rated" },
+];

@@ -7,6 +7,8 @@ import CalendarIcon from "../../assets/svgs/CalendarIcon";
 import HeartIcon from "../../assets/svgs/HeartIcon";
 import VerifiedIcon from "../../assets/svgs/VerifiedIcon";
 import Typography from "./Typography";
+import Status from "./Status";
+
 ProfileCard.defaultProps = {
   name: "Dr. Arkday Sheinin, MD",
   address: {
@@ -34,7 +36,9 @@ function ProfileCard({
         <div
           className={classes.image}
           style={{ backgroundImage: `url(${image})` }}
-        />
+        >
+          <Status status={"Accepting new patients"} />
+        </div>
         <div className={classes["text-icon__container"]}>
           <div className={classes.text}>
             <Typography fontSize={"m"} fontWeight="bolder" textAlign={"start"}>

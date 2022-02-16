@@ -19,4 +19,5 @@ export const Container = styled.div`
   border-top-style: ${(props) => props.$styles.borderTopStyle};
   border-top-width: ${(props) => props.$styles.borderTopWidth};
   max-width: ${(props) => props.$styles.maxWidth};
+  border-radius: ${(props) => props.$styles.borderRadius};
 `;
