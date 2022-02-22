@@ -23,7 +23,7 @@ function NavBar() {
             style={{
               width: "11.25rem",
               backgroundColor: "rgba(70, 167, 183, 0.2)",
-              color: "00778a",
+              color: "#00778a",
               height: "3rem",
             }}
           >
