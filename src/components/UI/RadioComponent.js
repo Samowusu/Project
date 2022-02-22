@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import CheckedRadioIcon from "../../assets/svgs/CheckedRadioIcon";
 import UncheckedRadioIcon from "../../assets/svgs/UncheckedRadioIcon";
+import Button from "./Button";
+import Typography from "./Typography";
 
 const RadioIcon = ({ val }) => {
   if (val) {
@@ -15,12 +17,14 @@ const RadioItem = ({ title, onChange, selected }) => {
   return (
     <RadioContainer onClick={onChange}>
       <RadioIcon val={selected} />
-      <RadioText>{title}</RadioText>
+      <Typography fontSize="l" fontWeight="regular" marginLeft={"10px"}>
+        {title}
+      </Typography>
     </RadioContainer>
   );
 };
 
-const RadioComponent = ({ options, onChange }) => {
+const RadioComponent = ({ options, onChange, header }) => {
   const [selectedValue, setSelectedValue] = useState(options[0]);
 
   useEffect(() => {
@@ -33,25 +37,57 @@ const RadioComponent = ({ options, onChange }) => {
   };
 
   return (
-    <RadioList>
-      {options.map((item, index) => {
-        return (
-          <RadioItem
-            key={index}
-            title={item}
-            selected={item === selectedValue}
-            onChange={() => selectHandler(item)}
-          />
-        );
-      })}
-    </RadioList>
+    <Card>
+      <HeaderContainer>
+        <Typography fontSize={"standard"} fontWeight="bold">
+          {header}
+        </Typography>
+        <Button
+          style={{
+            width: "2.94rem",
+            height: "1.13rem",
+            backgroundColor: "#F8F9FC",
+            color: "#818181",
+            fontSize: "0.63rem",
+            fontWeight: "400",
+          }}
+        >
+          Clear
+        </Button>
+      </HeaderContainer>
+      <RadioList>
+        {options.map((item, index) => {
+          return (
+            <RadioItem
+              key={index}
+              title={item}
+              selected={item === selectedValue}
+              onChange={() => selectHandler(item)}
+            />
+          );
+        })}
+      </RadioList>
+    </Card>
   );
 };
+
+const Card = styled.div`
+  width: 223px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 23px;
+`;
+
+const HeaderContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 17px;
+`;
 
 const RadioList = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 20px;
 `;
 
 const RadioContainer = styled.div`
@@ -59,13 +95,7 @@ const RadioContainer = styled.div`
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  margin-bottom: 10px;
-`;
-
-const RadioText = styled.p`
-  margin: 0;
-  padding: 0;
-  margin-left: 10px;
+  margin-bottom: 8px;
 `;
 
 export default RadioComponent;

@@ -95,10 +95,12 @@ function Glossary() {
       <RadioComponent
         options={SORT_OPTIONS}
         onChange={(val) => handleSortChange(val)}
+        header="Sort"
       />
       <RadioComponent
         options={DISTANCE_OPTIONS}
         onChange={(val) => handleDistanceChange(val)}
+        header="Distance"
       />
       <ProfileCard
         key="D1"
