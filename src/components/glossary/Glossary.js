@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 
 // components
-import DoctorProfile from "../UI/ProfileCard";
+import ProfileCard from "../UI/ProfileCard";
 import Search from "../header/search/Search";
 import Button from "../UI/Button";
 import Typography from "../UI/Typography";
@@ -11,33 +11,96 @@ import SpecialtyItem from "../popularSearches/specialties/SpecialtyItem";
 import HorizontalScrollbarComponent from "../horizontalScrollbar/HorizontalScrollbarComponent";
 
 // data
-import { blogsList, specialtiesList, radioButtonItems } from "../../Data";
+import {
+  blogsList,
+  specialtiesList,
+  radioButtonItems,
+  doctorsList,
+} from "../../Data";
 
 // images
 import doctor from "../../assets/images/doctor.png";
 import blog from "../../assets/images/blog.png";
 import item from "../../assets/images/item.png";
-import RadioButton from "../UI/RadioButton";
+import RadioComponent from "../UI/RadioComponent";
+import CheckedRadioIcon from "../../assets/svgs/CheckedRadioIcon";
+import UncheckedRadioIcon from "../../assets/svgs/UncheckedRadioIcon";
+
+// let PageSize = 4;
+
+const SORT_OPTIONS = ["Most Relevant", "Closest", "Highest Rated"];
+
+const DISTANCE_OPTIONS = ["100km", "200km", "300km", "Near Me", "National"];
 
 function Glossary() {
-  const [select, setSelect] = useState("optionA");
+  // const [objState, setObjState] = useState({
+  //   sort: SORT_OPTIONS[0],
+  //   distance: DISTANCE_OPTIONS[0],
+  // });
 
-  const handleSelectChange = (event) => {
-    const value = event.target.value;
-    setSelect(value);
+  const [sortState, setSortState] = useState(SORT_OPTIONS[0]);
+  const [distanceState, setDistanceState] = useState(DISTANCE_OPTIONS[0]);
+
+  // const [currentPage, setCurrentPage] = useState(1);
+
+  useEffect(() => {
+    console.log({ sortState, distanceState });
+  }, [sortState, distanceState]);
+
+  // const handleSelectChange = (key, val) => {
+  //   const updatedState = { ...objState, [key]: val };
+  //   setObjState({ ...updatedState });
+  //   console.log("clicked");
+  // };
+
+  const handleSortChange = (val) => {
+    setSortState(val);
   };
+
+  const handleDistanceChange = (val) => {
+    setDistanceState(val);
+  };
+
+  // const currentTableData = useMemo(() => {
+  //   const firstPageIndex = (currentPage - 1) * PageSize;
+  //   const lastPageIndex = firstPageIndex + PageSize;
+  //   return doctorsList.slice(firstPageIndex, lastPageIndex); //returns an array of 4 items per table
+  // }, [currentPage]);
+
+  // return (
+  //   <>
+  //     <div className="grid">
+  //       {currentTableData.map((doctor) => (
+  //         <ProfileCard
+  //           key={doctor.id}
+  //           name={doctor.name}
+  //           address={doctor.address}
+  //           image={doctor.image}
+  //           specialty={doctor.specialty}
+  //         />
+  //       ))}
+  //     </div>
+  //     <Pagination
+  //       className="pagination-bar"
+  //       currentPage={currentPage}
+  //       totalCount={doctorsList.length}
+  //       pageSize={PageSize}
+  //       onPageChange={(page) => setCurrentPage(page)}
+  //     />
+  //   </>
+  // );
 
   return (
     <div className="glossary">
-      {radioButtonItems.map((item) => (
-        <RadioButton
-          onChange={handleSelectChange}
-          select={select}
-          title={item.title}
-          value={item.value}
-        />
-      ))}
-      <DoctorProfile
+      <RadioComponent
+        options={SORT_OPTIONS}
+        onChange={(val) => handleSortChange(val)}
+      />
+      <RadioComponent
+        options={DISTANCE_OPTIONS}
+        onChange={(val) => handleDistanceChange(val)}
+      />
+      <ProfileCard
         key="D1"
         name="Dr. Yvw Bimpong"
         address={{

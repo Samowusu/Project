@@ -52,6 +52,7 @@ function Blogs({ blogsList, itemsPerSlide, justifyContent }) {
           interval={2000}
           autoFocus={true}
           renderIndicator={CarouselIndicator}
+          stopOnHover={true}
         >
           {updatedBlogsList.map((chunk, index) => (
             <div

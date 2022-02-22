@@ -39,6 +39,13 @@ code {
   cursor: pointer;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 30px;
+  justify-content: center;
+}
+
 .glossary {
   background-color: #ccc;
   display: flex;

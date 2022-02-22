@@ -52,6 +52,171 @@ export const doctorsList = [
     id: "A3",
     specialty: "Neurologist",
   },
+  {
+    name: "Dr. Arkday Sheinin, MD",
+    address: {
+      streetName: "585 Schenectady",
+      hospitalName: "Kingsbrook Jewish Medical Center",
+      province: "AveTema, GA",
+    },
+    image: doctor,
+    id: "A1",
+    specialty: "Dentist",
+  },
+  {
+    name: "Dr. Emerson Ekstrom",
+    address: {
+      streetName: "297 Moor Avenue",
+      hospitalName: "",
+      province: "Loughborough, TS46 7TD",
+    },
+    image: doctor2,
+    id: "A2",
+    specialty: "Cardiologist",
+  },
+  {
+    name: "Dr. Cristofer Levin",
+    address: {
+      streetName: "430 Songs Lane",
+      hospitalName: "",
+      province: "Tatsfield, TR67 4PH",
+    },
+    image: doctor3,
+    id: "A3",
+    specialty: "Neurologist",
+  },
+  {
+    name: "Dr. Arkday Sheinin, MD",
+    address: {
+      streetName: "585 Schenectady",
+      hospitalName: "Kingsbrook Jewish Medical Center",
+      province: "AveTema, GA",
+    },
+    image: doctor,
+    id: "A1",
+    specialty: "Dentist",
+  },
+  {
+    name: "Dr. Emerson Ekstrom",
+    address: {
+      streetName: "297 Moor Avenue",
+      hospitalName: "",
+      province: "Loughborough, TS46 7TD",
+    },
+    image: doctor2,
+    id: "A2",
+    specialty: "Cardiologist",
+  },
+  {
+    name: "Dr. Cristofer Levin",
+    address: {
+      streetName: "430 Songs Lane",
+      hospitalName: "",
+      province: "Tatsfield, TR67 4PH",
+    },
+    image: doctor3,
+    id: "A3",
+    specialty: "Neurologist",
+  },
+  {
+    name: "Dr. Arkday Sheinin, MD",
+    address: {
+      streetName: "585 Schenectady",
+      hospitalName: "Kingsbrook Jewish Medical Center",
+      province: "AveTema, GA",
+    },
+    image: doctor,
+    id: "A1",
+    specialty: "Dentist",
+  },
+  {
+    name: "Dr. Emerson Ekstrom",
+    address: {
+      streetName: "297 Moor Avenue",
+      hospitalName: "",
+      province: "Loughborough, TS46 7TD",
+    },
+    image: doctor2,
+    id: "A2",
+    specialty: "Cardiologist",
+  },
+  {
+    name: "Dr. Cristofer Levin",
+    address: {
+      streetName: "430 Songs Lane",
+      hospitalName: "",
+      province: "Tatsfield, TR67 4PH",
+    },
+    image: doctor3,
+    id: "A3",
+    specialty: "Neurologist",
+  },
+  {
+    name: "Dr. Arkday Sheinin, MD",
+    address: {
+      streetName: "585 Schenectady",
+      hospitalName: "Kingsbrook Jewish Medical Center",
+      province: "AveTema, GA",
+    },
+    image: doctor,
+    id: "A1",
+    specialty: "Dentist",
+  },
+  {
+    name: "Dr. Emerson Ekstrom",
+    address: {
+      streetName: "297 Moor Avenue",
+      hospitalName: "",
+      province: "Loughborough, TS46 7TD",
+    },
+    image: doctor2,
+    id: "A2",
+    specialty: "Cardiologist",
+  },
+  {
+    name: "Dr. Cristofer Levin",
+    address: {
+      streetName: "430 Songs Lane",
+      hospitalName: "",
+      province: "Tatsfield, TR67 4PH",
+    },
+    image: doctor3,
+    id: "A3",
+    specialty: "Neurologist",
+  },
+  {
+    name: "Dr. Arkday Sheinin, MD",
+    address: {
+      streetName: "585 Schenectady",
+      hospitalName: "Kingsbrook Jewish Medical Center",
+      province: "AveTema, GA",
+    },
+    image: doctor,
+    id: "A1",
+    specialty: "Dentist",
+  },
+  {
+    name: "Dr. Emerson Ekstrom",
+    address: {
+      streetName: "297 Moor Avenue",
+      hospitalName: "",
+      province: "Loughborough, TS46 7TD",
+    },
+    image: doctor2,
+    id: "A2",
+    specialty: "Cardiologist",
+  },
+  {
+    name: "Dr. Cristofer Levin",
+    address: {
+      streetName: "430 Songs Lane",
+      hospitalName: "",
+      province: "Tatsfield, TR67 4PH",
+    },
+    image: doctor3,
+    id: "A3",
+    specialty: "Neurologist",
+  },
 ];
 
 export const blogsList = [
