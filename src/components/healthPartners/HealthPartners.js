@@ -1,9 +1,9 @@
 import React from "react";
 import classes from "./HealthPartners.module.css";
 import healthPartners from "../../assets/images/healthPartners.png";
-import Typography from "../UI/Typography";
-import Button from "../UI/Button";
-import Container from "../UI/Container";
+import Typography from "../UI/typography/Typography";
+import Button from "../UI/button/Button";
+import Container from "../UI/container/Container";
 
 function HealthPartners() {
   return (

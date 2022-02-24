@@ -217,6 +217,28 @@ export const doctorsList = [
     id: "A3",
     specialty: "Neurologist",
   },
+  {
+    name: "Dr. Cristofer Levin",
+    address: {
+      streetName: "430 Songs Lane",
+      hospitalName: "",
+      province: "Tatsfield, TR67 4PH",
+    },
+    image: doctor3,
+    id: "A3",
+    specialty: "Neurologist",
+  },
+  {
+    name: "Dr. Cristofer Levin",
+    address: {
+      streetName: "430 Songs Lane",
+      hospitalName: "",
+      province: "Tatsfield, TR67 4PH",
+    },
+    image: doctor3,
+    id: "A3",
+    specialty: "Neurologist",
+  },
 ];
 
 export const blogsList = [

@@ -1,57 +1,59 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 // components
-import ProfileCard from "../UI/ProfileCard";
+import ProfileCard from "../UI/profileCard/ProfileCard";
 import Search from "../header/search/Search";
-import Button from "../UI/Button";
-import Typography from "../UI/Typography";
+import Button from "../UI/button/Button";
+import Typography from "../UI/typography/Typography";
 import Blogs from "../blogs/Blogs";
 import BlogItem from "../blogs/BlogItem";
 import SpecialtyItem from "../popularSearches/specialties/SpecialtyItem";
 import HorizontalScrollbarComponent from "../horizontalScrollbar/HorizontalScrollbarComponent";
-
 // data
-import {
-  blogsList,
-  specialtiesList,
-  radioButtonItems,
-  doctorsList,
-} from "../../Data";
+import { blogsList, specialtiesList, doctorsList } from "../../Data";
 
 // images
 import doctor from "../../assets/images/doctor.png";
 import blog from "../../assets/images/blog.png";
 import item from "../../assets/images/item.png";
-import RadioComponent from "../UI/RadioComponent";
-import CheckedRadioIcon from "../../assets/svgs/CheckedRadioIcon";
-import UncheckedRadioIcon from "../../assets/svgs/UncheckedRadioIcon";
+import RadioComponent from "../UI/radio/RadioComponent";
+import CheckBoxComponent from "../UI/checkbox/CheckBoxComponent";
+import Pagination from "../pagination/Pagination";
+import { pageSize } from "../pagination/Pagination";
 
-// let PageSize = 4;
+const CHECK_OPTIONS = [
+  "Pediatrics",
+  "Pediatrics Medicine",
+  "Family Medicine",
+  "Internal Medicine",
+  "Allergy & Immunology",
+  "General Medical Practice",
+];
 
 const SORT_OPTIONS = ["Most Relevant", "Closest", "Highest Rated"];
 
 const DISTANCE_OPTIONS = ["100km", "200km", "300km", "Near Me", "National"];
 
 function Glossary() {
-  // const [objState, setObjState] = useState({
-  //   sort: SORT_OPTIONS[0],
-  //   distance: DISTANCE_OPTIONS[0],
-  // });
-
   const [sortState, setSortState] = useState(SORT_OPTIONS[0]);
   const [distanceState, setDistanceState] = useState(DISTANCE_OPTIONS[0]);
 
-  // const [currentPage, setCurrentPage] = useState(1);
+  // states for managing the pagination component
+  const [currentPage, setCurrentPage] = useState(1); //the page on current display
+  const [startIndex, setStartIndex] = useState(0); //the start index of the items to display on a current page
+  const [endIndex, setEndIndex] = useState(pageSize); //the end index of the items to display on a current page
+  const [cardList, setCardList] = useState([]); //the array items to display
 
   useEffect(() => {
     console.log({ sortState, distanceState });
   }, [sortState, distanceState]);
 
-  // const handleSelectChange = (key, val) => {
-  //   const updatedState = { ...objState, [key]: val };
-  //   setObjState({ ...updatedState });
-  //   console.log("clicked");
-  // };
+  /*take the array(from the DB or config file) and slice it into the desired 
+  number of items to display per page(i.e pageSize) */
+  useEffect(() => {
+    const data = doctorsList.slice(startIndex, endIndex);
+    setCardList([...data]);
+  }, [currentPage]);
 
   const handleSortChange = (val) => {
     setSortState(val);
@@ -61,37 +63,55 @@ function Glossary() {
     setDistanceState(val);
   };
 
-  // const currentTableData = useMemo(() => {
-  //   const firstPageIndex = (currentPage - 1) * PageSize;
-  //   const lastPageIndex = firstPageIndex + PageSize;
-  //   return doctorsList.slice(firstPageIndex, lastPageIndex); //returns an array of 4 items per table
-  // }, [currentPage]);
+  //clickHandler is triggered when ever a pagination button is clicked
+  const paginationClickHandler = (event, pageNumber, pageSize) => {
+    if (
+      currentPage === pageNumber ||
+      pageNumber === 0 ||
+      pageNumber > Math.ceil(doctorsList.length / pageSize)
+    )
+      return;
 
-  // return (
-  //   <>
-  //     <div className="grid">
-  //       {currentTableData.map((doctor) => (
-  //         <ProfileCard
-  //           key={doctor.id}
-  //           name={doctor.name}
-  //           address={doctor.address}
-  //           image={doctor.image}
-  //           specialty={doctor.specialty}
-  //         />
-  //       ))}
-  //     </div>
-  //     <Pagination
-  //       className="pagination-bar"
-  //       currentPage={currentPage}
-  //       totalCount={doctorsList.length}
-  //       pageSize={PageSize}
-  //       onPageChange={(page) => setCurrentPage(page)}
-  //     />
-  //   </>
-  // );
+    const page = pageNumber;
+    const firstPageIndex = (pageNumber - 1) * pageSize;
+    const lastPageIndex = firstPageIndex + pageSize;
+
+    setStartIndex(firstPageIndex);
+    setEndIndex(lastPageIndex);
+    setCurrentPage(page);
+  };
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        width: "80%",
+        alignItems: "flex-start",
+      }}
+    >
+      <div className="grid">
+        {cardList.map((doctor, index) => (
+          <ProfileCard
+            key={index}
+            name={doctor.name}
+            address={doctor.address}
+            image={doctor.image}
+            specialty={doctor.specialty}
+          />
+        ))}
+      </div>
+      <Pagination
+        itemCount={doctorsList.length}
+        onChange={paginationClickHandler}
+        page={currentPage}
+      />
+    </div>
+  );
 
   return (
     <div className="glossary">
+      <CheckBoxComponent header={"Specialist"} options={CHECK_OPTIONS} />
       <RadioComponent
         options={SORT_OPTIONS}
         onChange={(val) => handleSortChange(val)}

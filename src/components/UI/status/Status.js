@@ -1,7 +1,7 @@
 import React from "react";
-import CheckIcon from "../../assets/svgs/CheckIcon";
-import Container from "./Container";
-import Typography from "./Typography";
+import CheckIcon from "../../../assets/svgs/CheckIcon";
+import Container from "../container/Container";
+import Typography from "../typography/Typography";
 
 function Status({ status }) {
   return (

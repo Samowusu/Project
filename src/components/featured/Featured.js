@@ -1,8 +1,8 @@
 import React from "react";
 import Doctors from "./doctors/Doctors";
 import Hospitals from "./hospitals/Hospitals";
-import Container from "../UI/Container";
-import Typography from "../UI/Typography";
+import Container from "../UI/container/Container";
+import Typography from "../UI/typography/Typography";
 
 function Featured({ doctorsList, hospitalsList }) {
   return (

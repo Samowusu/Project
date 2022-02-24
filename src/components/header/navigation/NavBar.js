@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./NavBar.module.css";
 import logo from "../../../assets/images/logo.png";
-import Button from "../../UI/Button";
+import Button from "../../UI/button/Button";
 
 function NavBar() {
   return (

@@ -1,81 +1,77 @@
 import React from "react";
-import classnames from "classnames";
-import { usePagination, DOTS } from "../../hooks/usePagination";
+import Pagination from "@mui/material/Pagination";
+import styled from "styled-components";
+import NextIcon from "../../assets/svgs/NextIcon";
+import PreviousIcon from "../../assets/svgs/PreviousIcon";
 
-import "./pagination.scss";
-const Pagination = (props) => {
-  const {
-    onPageChange,
-    totalCount,
-    siblingCount = 1,
-    currentPage,
-    pageSize,
-    className,
-  } = props;
+export const pageSize = 4;
+function NewPagination({ itemCount, onChange, page }) {
+  const count = Math.ceil(itemCount / pageSize);
 
-  const paginationRange = usePagination({
-    currentPage,
-    totalCount,
-    siblingCount,
-    pageSize,
-  });
-
-  // If there are less than 2 items in pagination range we shall not render the component
-  if (currentPage === 0 || paginationRange.length < 2) {
-    return null;
-  }
-
-  const onNext = () => {
-    onPageChange(currentPage + 1);
-  };
-
-  const onPrevious = () => {
-    onPageChange(currentPage - 1);
-  };
-
-  let lastPage = paginationRange[paginationRange.length - 1];
-  return (
-    <ul
-      className={classnames("pagination-container", { [className]: className })}
-    >
-      {/* Left navigation arrow */}
-      <li
-        className={classnames("pagination-item", {
-          disabled: currentPage === 1,
-        })}
-        onClick={onPrevious}
-      >
-        <div className="arrow left" />
-      </li>
-      {paginationRange.map((pageNumber) => {
-        // If the pageItem is a DOT, render the DOTS unicode character
-        if (pageNumber === DOTS) {
-          return <li className="pagination-item dots">&#8230;</li>;
-        }
-
-        // Render our Page Pills
+  const renderPaginationItem = (item) => {
+    switch (item.type) {
+      case "previous":
         return (
-          <li
-            className={classnames("pagination-item", {
-              selected: pageNumber === currentPage,
-            })}
-            onClick={() => onPageChange(pageNumber)}
-          >
-            {pageNumber}
-          </li>
+          <PageNavigationButton onClick={item.onClick}>
+            <PreviousIcon />
+          </PageNavigationButton>
         );
-      })}
-      {/*  Right Navigation arrow */}
-      <li
-        className={classnames("pagination-item", {
-          disabled: currentPage === lastPage,
-        })}
-        onClick={onNext}
-      >
-        <div className="arrow right" />
-      </li>
-    </ul>
-  );
-};
+      case "next":
+        return (
+          <PageNavigationButton onClick={item.onClick}>
+            <NextIcon />
+          </PageNavigationButton>
+        );
+      case "end-ellipsis":
+        return (
+          <PageNumberButton>
+            <p>...</p>
+          </PageNumberButton>
+        );
+      case "start-ellipsis":
+        return (
+          <PageNumberButton>
+            <p>...</p>
+          </PageNumberButton>
+        );
+      case "page":
+        return (
+          <PageNumberButton onClick={item.onClick} $selected={item.selected}>
+            {item.page}
+          </PageNumberButton>
+        );
+      default:
+        break;
+    }
+  };
 
-export default Pagination;
+  return (
+    <Pagination
+      count={count}
+      onChange={(event, pageNumber) => onChange(event, pageNumber, pageSize)}
+      renderItem={renderPaginationItem}
+      style={{ marginTop: "83px " }}
+      page={page}
+    />
+  );
+}
+
+export default NewPagination;
+
+const PageNavigationButton = styled.button`
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+`;
+
+const PageNumberButton = styled.button`
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: ${(props) => (props.$selected ? "#00778A" : "transparent")};
+  color: ${(props) => (props.$selected ? "#fff" : "#17394D")};
+  cursor: pointer;
+`;

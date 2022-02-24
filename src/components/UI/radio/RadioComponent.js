@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import CheckedRadioIcon from "../../assets/svgs/CheckedRadioIcon";
-import UncheckedRadioIcon from "../../assets/svgs/UncheckedRadioIcon";
-import Button from "./Button";
-import Typography from "./Typography";
+import CheckedRadioIcon from "../../../assets/svgs/CheckedRadioIcon";
+import UncheckedRadioIcon from "../../../assets/svgs/UncheckedRadioIcon";
+import Button from "../button/Button";
+import Typography from "../typography/Typography";
 
 const RadioIcon = ({ val }) => {
   if (val) {
@@ -17,7 +17,12 @@ const RadioItem = ({ title, onChange, selected }) => {
   return (
     <RadioContainer onClick={onChange}>
       <RadioIcon val={selected} />
-      <Typography fontSize="l" fontWeight="regular" marginLeft={"10px"}>
+      <Typography
+        fontSize="l"
+        fontWeight="regular"
+        marginLeft={"10px"}
+        textAlign="start"
+      >
         {title}
       </Typography>
     </RadioContainer>
@@ -71,26 +76,27 @@ const RadioComponent = ({ options, onChange, header }) => {
   );
 };
 
-const Card = styled.div`
+export const Card = styled.div`
   width: 223px;
   background-color: #ffffff;
   border-radius: 12px;
-  padding: 23px;
+  padding: 23px 0 23px 23px;
 `;
 
-const HeaderContainer = styled.div`
+export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 17px;
+  margin-right: 23px;
 `;
 
-const RadioList = styled.div`
+export const RadioList = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-const RadioContainer = styled.div`
+export const RadioContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;

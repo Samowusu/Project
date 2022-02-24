@@ -28,6 +28,7 @@ function TextComponent({
   textAlign,
   marginBottom,
   marginLeft,
+  marginTop,
 }) {
   return (
     <Typography
@@ -38,6 +39,7 @@ function TextComponent({
       $textAlign={textAlign}
       $marginBottom={marginBottom}
       $marginLeft={marginLeft}
+      $marginTop={marginTop}
     >
       {children}
     </Typography>

@@ -3,8 +3,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import BlogItem from "./BlogItem";
 import classes from "./Blogs.module.css";
-import Button from "../UI/Button";
-import Container from "../UI/Container";
+import Button from "../UI/button/Button";
+import Container from "../UI/container/Container";
 import styled from "styled-components";
 
 Blogs.defaultProps = {

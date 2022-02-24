@@ -1,8 +1,8 @@
 import React from "react";
-import ProfileCard from "../../UI/ProfileCard";
-import Button from "../../UI/Button";
-import Typography from "../../UI/Typography";
-import Container from "../../UI/Container";
+import ProfileCard from "../../UI/profileCard/ProfileCard";
+import Button from "../../UI/button/Button";
+import Typography from "../../UI/typography/Typography";
+import Container from "../../UI/container/Container";
 
 function Doctors({ doctorsList }) {
   return (

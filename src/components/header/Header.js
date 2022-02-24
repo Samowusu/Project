@@ -2,8 +2,8 @@ import React from "react";
 import header from "../../assets/images/header.png";
 import NavBar from "./navigation/NavBar";
 import Search from "./search/Search";
-import Typography from "../UI/Typography";
-import Container from "../UI/Container";
+import Typography from "../UI/typography/Typography";
+import Container from "../UI/container/Container";
 import HeaderBottom from "./Header-styles";
 
 function Header() {
