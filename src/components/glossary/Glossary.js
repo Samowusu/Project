@@ -9,8 +9,13 @@ import Blogs from "../blogs/Blogs";
 import BlogItem from "../blogs/BlogItem";
 import SpecialtyItem from "../popularSearches/specialties/SpecialtyItem";
 import HorizontalScrollbarComponent from "../horizontalScrollbar/HorizontalScrollbarComponent";
+import Pagination from "../pagination/Pagination";
+import SwitchButton from "../UI/switchButton/SwitchButton";
+import Input from "../UI/input/Input";
+
 // data
 import { blogsList, specialtiesList, doctorsList } from "../../Data";
+import { pageSize } from "../pagination/Pagination";
 
 // images
 import doctor from "../../assets/images/doctor.png";
@@ -18,9 +23,8 @@ import blog from "../../assets/images/blog.png";
 import item from "../../assets/images/item.png";
 import RadioComponent from "../UI/radio/RadioComponent";
 import CheckBoxComponent from "../UI/checkbox/CheckBoxComponent";
-import Pagination from "../pagination/Pagination";
-import { pageSize } from "../pagination/Pagination";
 
+//DUMMY DATA
 const CHECK_OPTIONS = [
   "Pediatrics",
   "Pediatrics Medicine",
@@ -82,35 +86,33 @@ function Glossary() {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        width: "80%",
-        alignItems: "flex-start",
-      }}
-    >
-      <div className="grid">
-        {cardList.map((doctor, index) => (
-          <ProfileCard
-            key={index}
-            name={doctor.name}
-            address={doctor.address}
-            image={doctor.image}
-            specialty={doctor.specialty}
-          />
-        ))}
-      </div>
-      <Pagination
-        itemCount={doctorsList.length}
-        onChange={paginationClickHandler}
-        page={currentPage}
-      />
-    </div>
-  );
-
-  return (
     <div className="glossary">
+      <SwitchButton />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          width: "80%",
+          alignItems: "flex-start",
+        }}
+      >
+        <div className="grid">
+          {cardList.map((doctor, index) => (
+            <ProfileCard
+              key={index}
+              name={doctor.name}
+              address={doctor.address}
+              image={doctor.image}
+              specialty={doctor.specialty}
+            />
+          ))}
+        </div>
+        <Pagination
+          itemCount={doctorsList.length}
+          onChange={paginationClickHandler}
+          page={currentPage}
+        />
+      </div>
       <CheckBoxComponent header={"Specialist"} options={CHECK_OPTIONS} />
       <RadioComponent
         options={SORT_OPTIONS}

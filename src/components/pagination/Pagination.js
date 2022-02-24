@@ -74,4 +74,5 @@ const PageNumberButton = styled.button`
   background-color: ${(props) => (props.$selected ? "#00778A" : "transparent")};
   color: ${(props) => (props.$selected ? "#fff" : "#17394D")};
   cursor: pointer;
+  margin: 0 3px;
 `;

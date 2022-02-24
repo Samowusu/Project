@@ -58,6 +58,11 @@ code {
   width: calc(100vw-330px);
 }
 
+.react-switch {
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
 /* @media (max-width: 1200px) {
   html {
     font-size: 12px;
