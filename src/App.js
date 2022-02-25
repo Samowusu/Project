@@ -4,11 +4,6 @@ import Glossary from "./components/glossary/Glossary";
 
 function App() {
   return <Glossary />;
-  return (
-    <div className="App">
-      <Landing />
-    </div>
-  );
 }
 
 export default App;

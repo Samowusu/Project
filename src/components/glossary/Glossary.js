@@ -57,7 +57,7 @@ function Glossary() {
   useEffect(() => {
     const data = doctorsList.slice(startIndex, endIndex);
     setCardList([...data]);
-  }, [currentPage]);
+  }, [currentPage, startIndex, endIndex]);
 
   const handleSortChange = (val) => {
     setSortState(val);
