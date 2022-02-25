@@ -13,8 +13,8 @@ const BasicHooksExample = () => {
         onChange={handleChange}
         checked={checked}
         className="react-switch"
-        onColor="#00000033"
-        offColor="#00000033"
+        onColor="#000033"
+        offColor="#000033"
         onHandleColor="#ffffff"
         handleDiameter={20}
         uncheckedIcon={false}
@@ -27,5 +27,6 @@ const BasicHooksExample = () => {
     </div>
   );
 };
+// background: #00000033;
 
 export default BasicHooksExample;

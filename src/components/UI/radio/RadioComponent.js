@@ -32,10 +32,6 @@ const RadioItem = ({ title, onChange, selected }) => {
 const RadioComponent = ({ options, onChange, header }) => {
   const [selectedValue, setSelectedValue] = useState(options[0]);
 
-  useEffect(() => {
-    console.log({ selectedValue });
-  }, [selectedValue]);
-
   const selectHandler = (val) => {
     onChange(val);
     setSelectedValue(val);

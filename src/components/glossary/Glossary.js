@@ -11,7 +11,7 @@ import SpecialtyItem from "../popularSearches/specialties/SpecialtyItem";
 import HorizontalScrollbarComponent from "../horizontalScrollbar/HorizontalScrollbarComponent";
 import Pagination from "../pagination/Pagination";
 import SwitchButton from "../UI/switchButton/SwitchButton";
-import Input from "../UI/input/Input";
+import Insurance from "../UI/insurance/Insurance";
 
 // data
 import { blogsList, specialtiesList, doctorsList } from "../../Data";
@@ -87,6 +87,7 @@ function Glossary() {
 
   return (
     <div className="glossary">
+      <Insurance />
       <SwitchButton />
       <div
         style={{

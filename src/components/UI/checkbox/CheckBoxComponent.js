@@ -20,7 +20,7 @@ const BoxIcon = ({ val }) => {
   return <UncheckedBox />;
 };
 
-const BoxItem = ({ title, onChange }) => {
+const BoxItem = ({ title }) => {
   const [checkedState, setCheckedState] = useState(false);
 
   const checkBoxHandler = () => {
@@ -42,20 +42,7 @@ const BoxItem = ({ title, onChange }) => {
   );
 };
 
-const CheckBoxComponent = ({ options, header, onChange }) => {
-  const [selected, setSelected] = useState(false);
-
-  useEffect(() => {
-    console.log({ selected });
-  }, [selected]);
-
-  const selectHandler = (item) => {
-    console.log("clicked");
-    const val = item == "" ? false : true;
-    console.log({ val });
-    setSelected(!val);
-  };
-
+const CheckBoxComponent = ({ options, header }) => {
   return (
     <Card>
       <HeaderContainer>
@@ -77,14 +64,7 @@ const CheckBoxComponent = ({ options, header, onChange }) => {
       </HeaderContainer>
       <RadioList>
         {options.map((item, index) => {
-          return (
-            <BoxItem
-              key={index}
-              title={item}
-              selected={item === selected}
-              onChange={() => selectHandler(item)}
-            />
-          );
+          return <BoxItem key={index} title={item} />;
         })}
       </RadioList>
       <Typography
