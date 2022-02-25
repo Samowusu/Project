@@ -1,12 +1,14 @@
 import React from "react";
 import classes from "./ProfileCard.module.css";
 
-import doctor from "../../assets/images/doctor.png";
+import doctor from "../../../assets/images/doctor.png";
 
-import CalendarIcon from "../../assets/svgs/CalendarIcon";
-import HeartIcon from "../../assets/svgs/HeartIcon";
-import VerifiedIcon from "../../assets/svgs/VerifiedIcon";
-import Typography from "./Typography";
+import CalendarIcon from "../../../assets/svgs/CalendarIcon";
+import HeartIcon from "../../../assets/svgs/HeartIcon";
+import VerifiedIcon from "../../../assets/svgs/VerifiedIcon";
+import Typography from "../typography/Typography";
+import Status from "../status/Status";
+
 ProfileCard.defaultProps = {
   name: "Dr. Arkday Sheinin, MD",
   address: {
@@ -34,7 +36,9 @@ function ProfileCard({
         <div
           className={classes.image}
           style={{ backgroundImage: `url(${image})` }}
-        />
+        >
+          <Status status={"Accepting new patients"} />
+        </div>
         <div className={classes["text-icon__container"]}>
           <div className={classes.text}>
             <Typography fontSize={"m"} fontWeight="bolder" textAlign={"start"}>

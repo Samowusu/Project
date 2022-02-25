@@ -6,6 +6,7 @@ export const Typography = styled.p`
   color: ${(props) => props.$color ?? `#000`};
   line-height: ${(props) => props.$lineHeight};
   text-align: ${(props) => props.$textAlign ?? "center"};
+  margin-top: ${(props) => props.$marginTop ?? 0};
   margin-bottom: ${(props) => props.$marginBottom ?? 0};
   margin-left: ${(props) => props.$marginLeft ?? 0};
 `;

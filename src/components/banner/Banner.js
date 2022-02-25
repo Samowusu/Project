@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Banner.module.css";
-import Typography from "../UI/Typography";
+import Typography from "../UI/typography/Typography";
 
 function Banner() {
   return (

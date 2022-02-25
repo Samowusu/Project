@@ -1,10 +1,10 @@
 import React from "react";
 import classes from "./PopularSearches.module.css";
-import Button from "../UI/Button";
+import Button from "../UI/button/Button";
 import SpecialtyItem from "./specialties/SpecialtyItem";
 import HorizontalScrollbarComponent from "../horizontalScrollbar/HorizontalScrollbarComponent";
-import Container from "../UI/Container";
-import Typography from "../UI/Typography";
+import Container from "../UI/container/Container";
+import Typography from "../UI/typography/Typography";
 
 function PopularSearches({ specialtiesList }) {
   return (

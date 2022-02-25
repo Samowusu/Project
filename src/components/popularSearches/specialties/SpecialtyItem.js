@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./SpecialtyItem.module.css";
 import skin from "../../../assets/images/item.png";
-import Typography from "../../UI/Typography";
+import Typography from "../../UI/typography/Typography";
 
 SpecialtyItem.defaultProps = { title: "Dermatology", image: skin };
 

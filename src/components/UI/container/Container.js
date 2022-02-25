@@ -21,6 +21,7 @@ ContainerComponent.defaultProps = {
     borderTopColor: "transparent",
     borderTopStyle: "none",
     maxWidth: "none",
+    borderRadius: "0",
   },
 };
 

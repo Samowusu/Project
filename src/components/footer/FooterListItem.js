@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./FooterListItem.module.css";
-import Typography from "../UI/Typography";
+import Typography from "../UI/typography/Typography";
 
 function FooterListItem({ title, listItems }) {
   return (

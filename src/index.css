@@ -39,6 +39,13 @@ code {
   cursor: pointer;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 30px;
+  justify-content: center;
+}
+
 .glossary {
   background-color: #ccc;
   display: flex;
@@ -50,8 +57,14 @@ code {
 .scrollContainer {
   width: calc(100vw-330px);
 }
-@media (max-width: 1200px) {
+
+.react-switch {
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+/* @media (max-width: 1200px) {
   html {
     font-size: 12px;
   }
-}
+} */

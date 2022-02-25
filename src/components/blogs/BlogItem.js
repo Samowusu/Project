@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./BlogItem.module.css";
 import blogImage from "../../assets/images/blog.png";
-import Typography from "../UI/Typography";
+import Typography from "../UI/typography/Typography";
 
 BlogItem.defaultProps = {
   date: "Sat Apr 03 2021",

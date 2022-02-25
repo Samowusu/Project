@@ -8,6 +8,8 @@ const fontSizeMapping = {
   l: "0.88rem",
   m: "0.75rem",
   s: "0.56rem",
+
+  standard: "1rem",
 };
 
 const fontWeightMapping = {
@@ -26,16 +28,18 @@ function TextComponent({
   textAlign,
   marginBottom,
   marginLeft,
+  marginTop,
 }) {
   return (
     <Typography
-      $fontSize={fontSize ? fontSizeMapping[fontSize] : "0.56rem"}
+      $fontSize={fontSize ? fontSizeMapping[fontSize] : "1rem"}
       $color={color}
       $fontWeight={fontWeight ? fontWeightMapping[fontWeight] : "400"}
       $lineHeight={lineHeight}
       $textAlign={textAlign}
       $marginBottom={marginBottom}
       $marginLeft={marginLeft}
+      $marginTop={marginTop}
     >
       {children}
     </Typography>

@@ -1,8 +1,8 @@
 import React from "react";
-import ProfileCard from "../../UI/ProfileCard";
-import Button from "../../UI/Button";
-import Container from "../../UI/Container";
-import Typography from "../../UI/Typography";
+import ProfileCard from "../../UI/profileCard/ProfileCard";
+import Button from "../../UI/button/Button";
+import Container from "../../UI/container/Container";
+import Typography from "../../UI/typography/Typography";
 
 function Hospitals({ hospitalsList }) {
   return (
