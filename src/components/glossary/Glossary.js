@@ -87,7 +87,6 @@ function Glossary() {
 
   return (
     <div className="glossary">
-      <Insurance />
       <SwitchButton />
       <div
         style={{
@@ -114,6 +113,7 @@ function Glossary() {
           page={currentPage}
         />
       </div>
+      <Insurance />
       <CheckBoxComponent header={"Specialist"} options={CHECK_OPTIONS} />
       <RadioComponent
         options={SORT_OPTIONS}
