@@ -41,6 +41,7 @@ const DISTANCE_OPTIONS = ["100km", "200km", "300km", "Near Me", "National"];
 function Glossary() {
   const [sortState, setSortState] = useState(SORT_OPTIONS[0]);
   const [distanceState, setDistanceState] = useState(DISTANCE_OPTIONS[0]);
+  const [checkedState, setCheckedState] = useState(false);
 
   // states for managing the pagination component
   const [currentPage, setCurrentPage] = useState(1); //the page on current display
@@ -85,9 +86,13 @@ function Glossary() {
     setCurrentPage(page);
   };
 
+  const switchChangeHandler = (nextChecked) => {
+    setCheckedState(nextChecked);
+  };
+
   return (
     <div className="glossary">
-      <SwitchButton />
+      <SwitchButton value={checkedState} onChange={switchChangeHandler} />
       <div
         style={{
           display: "flex",

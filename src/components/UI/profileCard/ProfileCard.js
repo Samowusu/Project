@@ -20,6 +20,7 @@ ProfileCard.defaultProps = {
   id: "A1",
   specialty: "",
   isVerified: true,
+  hasStatus: true,
 };
 
 function ProfileCard({
@@ -29,6 +30,7 @@ function ProfileCard({
   id,
   specialty,
   isVerified,
+  hasStatus,
 }) {
   return (
     <div className={classes["profile-card"]}>
@@ -37,7 +39,7 @@ function ProfileCard({
           className={classes.image}
           style={{ backgroundImage: `url(${image})` }}
         >
-          <Status status={"Accepting new patients"} />
+          {hasStatus && <Status status={"Accepting new patients"} />}
         </div>
         <div className={classes["text-icon__container"]}>
           <div className={classes.text}>

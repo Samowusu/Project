@@ -1,20 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Switch from "react-switch";
 
-const BasicHooksExample = () => {
-  const [checked, setChecked] = useState(false);
+SwitchButton.defaultProps = {
+  value: null,
+  onChange: (value) => {
+    console.log(value);
+  },
+};
+
+function SwitchButton({ value, onChange }) {
+  const [checked, setChecked] = useState(value ?? false);
   const handleChange = (nextChecked) => {
     setChecked(nextChecked);
+    onChange(nextChecked);
   };
 
   return (
     <div>
       <Switch
         onChange={handleChange}
-        checked={checked}
+        checked={value ?? checked}
         className="react-switch"
-        onColor="#000033"
-        offColor="#000033"
+        onColor="#317B85"
+        offColor="#d2d2d2"
         onHandleColor="#ffffff"
         handleDiameter={20}
         uncheckedIcon={false}
@@ -26,7 +34,6 @@ const BasicHooksExample = () => {
       />
     </div>
   );
-};
-// background: #00000033;
+}
 
-export default BasicHooksExample;
+export default SwitchButton;
