@@ -15,7 +15,7 @@ import Insurance from "../UI/insurance/Insurance";
 
 // data
 import { blogsList, specialtiesList, doctorsList } from "../../Data";
-import { pageSize } from "../pagination/Pagination";
+// import { pageSize } from "../pagination/Pagination";
 
 // images
 import doctor from "../../assets/images/doctor.png";
@@ -46,7 +46,7 @@ function Glossary() {
   // states for managing the pagination component
   const [currentPage, setCurrentPage] = useState(1); //the page on current display
   const [startIndex, setStartIndex] = useState(0); //the start index of the items to display on a current page
-  const [endIndex, setEndIndex] = useState(pageSize); //the end index of the items to display on a current page
+  const [endIndex, setEndIndex] = useState(8); //the end index of the items to display on a current page
   const [cardList, setCardList] = useState([]); //the array items to display
 
   useEffect(() => {
@@ -113,9 +113,10 @@ function Glossary() {
           ))}
         </div>
         <Pagination
-          itemCount={doctorsList.length}
+          currentPage={currentPage}
           onChange={paginationClickHandler}
-          page={currentPage}
+          pageSize={8}
+          itemCount={doctorsList.length}
         />
       </div>
       <Insurance />

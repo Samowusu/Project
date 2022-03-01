@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Pagination from "@mui/material/Pagination";
 import styled from "styled-components";
 import NextIcon from "../../assets/svgs/NextIcon";
 import PreviousIcon from "../../assets/svgs/PreviousIcon";
 
-export const pageSize = 4;
-function NewPagination({ itemCount, onChange, page }) {
-  const count = Math.ceil(itemCount / pageSize);
+NewPagination.defaultProps = {
+  itemCount: 300,
+  onChange: (value, number) => {
+    console.log({ value, number });
+  },
+  currentPage: 4,
+  pageSize: 8,
+};
+
+function NewPagination({ itemCount, onChange, currentPage, pageSize }) {
+  const [currentPageState, setCurrentPageState] = useState(currentPage ?? 3);
+
+  const changeHandler = (event, pageNumber) => {
+    console.log({ event, pageNumber });
+    setCurrentPageState(pageNumber);
+    onChange(event, pageNumber, pageSize);
+  };
 
   const renderPaginationItem = (item) => {
     switch (item.type) {
@@ -47,11 +61,11 @@ function NewPagination({ itemCount, onChange, page }) {
 
   return (
     <Pagination
-      count={count}
-      onChange={(event, pageNumber) => onChange(event, pageNumber, pageSize)}
+      count={Math.ceil(itemCount / pageSize)}
+      onChange={changeHandler}
       renderItem={renderPaginationItem}
       style={{ marginTop: "83px " }}
-      page={page}
+      page={currentPageState}
     />
   );
 }
@@ -64,6 +78,7 @@ const PageNavigationButton = styled.button`
   border: none;
   background-color: transparent;
   cursor: pointer;
+  margin: 0 18px;
 `;
 
 const PageNumberButton = styled.button`
