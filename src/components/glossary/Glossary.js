@@ -68,7 +68,11 @@ function Glossary() {
     setDistanceState(val);
   };
 
-  //clickHandler is triggered when ever a pagination button is clicked
+  /*paginationClickHandler is triggered when ever a pagination button is clicked.
+  the firstPageIndex and lastPageIndex logic is set to provide an interval of the same
+  size as the pageSize. these indexes are then used to slice the whole dataset into 
+  the desired pageSize. thus used to update the `setStartIndex` and `setEndIndex` states
+  */
   const paginationClickHandler = (event, pageNumber, pageSize) => {
     if (
       currentPage === pageNumber ||
