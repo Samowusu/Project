@@ -112,12 +112,7 @@ function Glossary() {
             />
           ))}
         </div>
-        <Pagination
-          currentPage={currentPage}
-          onChange={paginationClickHandler}
-          pageSize={8}
-          itemCount={doctorsListPagination.length}
-        />
+        <Pagination />
       </div>
       <Insurance />
       <CheckBoxComponent header={"Specialist"} options={CHECK_OPTIONS} />
