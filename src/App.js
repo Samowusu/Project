@@ -1,8 +1,8 @@
 import "./App.css";
-import Glossary from "./components/glossary/Glossary";
+import Landing from "./pages/landing/Landing";
 
 function App() {
-  return <Glossary />;
+  return <Landing />;
 }
 
 export default App;
