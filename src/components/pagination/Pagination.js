@@ -65,7 +65,7 @@ function NewPagination({ itemCount, onChange, currentPage, pageSize }) {
       onChange={changeHandler}
       renderItem={renderPaginationItem}
       style={{ marginTop: "83px " }}
-      page={currentPageState}
+      page={currentPage ?? currentPageState}
     />
   );
 }

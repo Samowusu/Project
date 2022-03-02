@@ -3,7 +3,7 @@ import classes from "./PopularSearches.module.css";
 import Button from "../UI/button/Button";
 import SpecialtyItem from "./specialties/SpecialtyItem";
 import HorizontalScrollbarComponent from "../horizontalScrollbar/HorizontalScrollbarComponent";
-import Container from "../UI/container/Container";
+import Container from "../UI/containers/FlexContainer";
 import Typography from "../UI/typography/Typography";
 
 function PopularSearches({ specialtiesList }) {

@@ -26,12 +26,12 @@ const Insurance = () => {
 export default Insurance;
 
 const InputBox = styled.input`
-  width: 11.13rem;
+  width: 85%;
   height: 2.31rem;
   border-radius: 4px;
   background: #f8f9fc;
   border: 1px solid #e7eff0;
   outline-width: 0;
-  padding: 10px;
+  padding: 5px;
   color: #000000;
 `;

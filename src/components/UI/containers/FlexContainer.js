@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "./Container-styles";
+import { Container } from "./FlexContainer-styles";
 
 ContainerComponent.defaultProps = {
   children: "",

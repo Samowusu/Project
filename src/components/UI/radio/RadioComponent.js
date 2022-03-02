@@ -73,10 +73,11 @@ const RadioComponent = ({ options, onChange, header }) => {
 };
 
 export const Card = styled.div`
-  width: 223px;
+  width: 100%;
   background-color: #ffffff;
   border-radius: 12px;
   padding: 23px 0 23px 23px;
+  margin-bottom: 8px;
 `;
 
 export const HeaderContainer = styled.div`

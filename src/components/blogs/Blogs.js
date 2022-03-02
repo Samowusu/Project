@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import BlogItem from "./BlogItem";
 import classes from "./Blogs.module.css";
 import Button from "../UI/button/Button";
-import Container from "../UI/container/Container";
+import Container from "../UI/containers/FlexContainer";
 import styled from "styled-components";
 
 Blogs.defaultProps = {

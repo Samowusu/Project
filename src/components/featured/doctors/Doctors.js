@@ -2,7 +2,7 @@ import React from "react";
 import ProfileCard from "../../UI/profileCard/ProfileCard";
 import Button from "../../UI/button/Button";
 import Typography from "../../UI/typography/Typography";
-import Container from "../../UI/container/Container";
+import Container from "../../UI/containers/FlexContainer";
 
 function Doctors({ doctorsList }) {
   return (
