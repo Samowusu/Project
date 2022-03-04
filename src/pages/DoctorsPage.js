@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import doctorsHeader from "../../assets/images/doctorsheader.png";
-import Header from "../../components/header/Header";
-import SidePanel from "../../components/sidePanel/SidePanel";
-import FlexContainer from "../../components/UI/containers/FlexContainer";
-import GridContainer from "../../components/UI/containers/GridContainer";
-import ProfileCard from "../../components/UI/profileCard/ProfileCard";
-import Pagination from "../../components/pagination/Pagination";
-import { doctorsList } from "../../Data";
-import Footer from "../../components/footer/Footer";
+import doctorsHeader from "../assets/images/doctorsheader.png";
+import Header from "../components/header/Header";
+import SidePanel from "../components/sidePanel/SidePanel";
+import FlexContainer from "../components/UI/containers/FlexContainer";
+import GridContainer from "../components/UI/containers/GridContainer";
+import ProfileCard from "../components/UI/profileCard/ProfileCard";
+import Pagination from "../components/pagination/Pagination";
+import { doctorsList } from "../Data";
+import Footer from "../components/footer/Footer";
 
 function DoctorsPage() {
   const [currentPage, setCurrentPage] = useState(1); //the page on current display

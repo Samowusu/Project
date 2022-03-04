@@ -24,9 +24,9 @@ function Doctors({ doctorsList }) {
           marginTop: "29px",
         }}
       >
-        {doctorsList.map((doctor) => (
+        {doctorsList.map((doctor, index) => (
           <ProfileCard
-            key={doctor.id}
+            key={index}
             name={doctor.name}
             address={doctor.address}
             image={doctor.image}

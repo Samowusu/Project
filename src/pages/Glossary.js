@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from "react";
 
 // components
-import ProfileCard from "../UI/profileCard/ProfileCard";
-import Search from "../header/search/Search";
-import Button from "../UI/button/Button";
-import Typography from "../UI/typography/Typography";
-import Blogs from "../blogs/Blogs";
-import BlogItem from "../blogs/BlogItem";
-import SpecialtyItem from "../popularSearches/specialties/SpecialtyItem";
-import HorizontalScrollbarComponent from "../horizontalScrollbar/HorizontalScrollbarComponent";
-import Pagination from "../pagination/Pagination";
-import SwitchButton from "../UI/switchButton/SwitchButton";
-import Insurance from "../UI/insurance/Insurance";
+import ProfileCard from "../components/UI/profileCard/ProfileCard";
+import Search from "../components/header/search/Search";
+import Button from "../components/UI/button/Button";
+import Typography from "../components/UI/typography/Typography";
+import Blogs from "../components/blogs/Blogs";
+import BlogItem from "../components/blogs/BlogItem";
+import SpecialtyItem from "../components/popularSearches/specialties/SpecialtyItem";
+import HorizontalScrollbarComponent from "../components/horizontalScrollbar/HorizontalScrollbarComponent";
+import Pagination from "../components/pagination/Pagination";
+import SwitchButton from "../components/UI/switchButton/SwitchButton";
+import Insurance from "../components/UI/insurance/Insurance";
 
 // data
-import { blogsList, specialtiesList, doctorsList } from "../../Data";
+import { blogsList, specialtiesList, doctorsList } from "../Data";
 // import { pageSize } from "../pagination/Pagination";
 
 // images
-import doctor from "../../assets/images/doctor.png";
-import blog from "../../assets/images/blog.png";
-import item from "../../assets/images/item.png";
-import RadioComponent from "../UI/radio/RadioComponent";
-import CheckBoxComponent from "../UI/checkbox/CheckBoxComponent";
+import doctor from "../assets/images/doctor.png";
+import blog from "../assets/images/blog.png";
+import item from "../assets/images/item.png";
+import RadioComponent from "../components/UI/radio/RadioComponent";
+import CheckBoxComponent from "../components/UI/checkbox/CheckBoxComponent";
 
 //DUMMY DATA
 const CHECK_OPTIONS = [

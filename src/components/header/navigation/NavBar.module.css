@@ -25,7 +25,7 @@
   margin-right: 40px;
 }
 
-.navBar-left ul {
+.navBar-left nav {
   list-style: none;
   display: flex;
   width: 80%;
@@ -33,11 +33,17 @@
   align-items: center;
 }
 
-.navBar-left ul > li {
+.navBar-left nav a {
   font-size: var(--l);
   font-weight: 400;
   color: #000000;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.navBar-left nav a .active {
+  border-bottom: 3px solid #ff7d19;
+  color: #ff7d19;
 }
 
 .button {
