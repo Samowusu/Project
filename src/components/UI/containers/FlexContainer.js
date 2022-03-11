@@ -1,3 +1,4 @@
+import { autocompleteClasses } from "@mui/material";
 import React from "react";
 import { Container } from "./FlexContainer-styles";
 
@@ -22,6 +23,7 @@ ContainerComponent.defaultProps = {
     borderTopStyle: "none",
     maxWidth: "none",
     borderRadius: "0",
+    height: "auto",
   },
 };
 

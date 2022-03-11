@@ -18,7 +18,7 @@ const RadioItem = ({ title, onChange, selected }) => {
     <RadioContainer onClick={onChange}>
       <RadioIcon val={selected} />
       <Typography
-        fontSize="l"
+        fontSize="m"
         fontWeight="regular"
         marginLeft={"10px"}
         textAlign="start"
@@ -40,7 +40,7 @@ const RadioComponent = ({ options, onChange, header }) => {
   return (
     <Card>
       <HeaderContainer>
-        <Typography fontSize={"standard"} fontWeight="bold">
+        <Typography fontSize={"l"} fontWeight="bold">
           {header}
         </Typography>
         <Button
@@ -76,7 +76,7 @@ export const Card = styled.div`
   width: 100%;
   background-color: #ffffff;
   border-radius: 12px;
-  padding: 23px 0 23px 23px;
+  padding: 21px 0 21px 21px;
   margin-bottom: 8px;
 `;
 

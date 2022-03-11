@@ -7,14 +7,12 @@ function Status({ status }) {
   return (
     <Container
       style={{
-        width: "75%",
         backgroundColor: "#6CDA88",
         borderRadius: "40px",
         paddingTop: "6.74px",
         paddingBottom: "6.74px",
-        justifyContent: "space-evenly",
-        paddingLeft: "10.4px",
-        marginBottom: "10px",
+        justifyContent: "flex-start",
+        paddingLeft: "5px",
       }}
     >
       <CheckIcon />
@@ -23,6 +21,7 @@ function Status({ status }) {
         fontWeight="bolder"
         color="#070928"
         textAlign={"start"}
+        marginLeft="6px"
       >
         {status}
       </Typography>

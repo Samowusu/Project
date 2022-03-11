@@ -40,6 +40,7 @@ function SidePanel() {
         alignItems: "flex-start",
         justifyContent: "flex-start",
         width: "19%",
+        marginRight: "30px",
       }}
     >
       <Insurance />

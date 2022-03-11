@@ -44,40 +44,49 @@ function DoctorsPage() {
       <FlexContainer
         style={{
           backgroundColor: "#F8F9FC",
-          paddingTop: "34px",
-          paddingBottom: "60px",
-          paddingRight: "2.44rem",
-          paddingLeft: "2.44rem",
-          justifyContent: "space-between",
-          alignItems: "flex-start",
+
+          justifyContent: "center",
         }}
       >
-        <SidePanel />
         <FlexContainer
           style={{
-            display: "flex",
-            flexDirection: "column",
+            width: "90%",
+            maxWidth: "1440px",
+            paddingTop: "34px",
+            paddingBottom: "60px",
+            justifyContent: "flex-start",
             alignItems: "flex-start",
-            width: "77%",
           }}
         >
-          <GridContainer>
-            {cardList.map((doctor, index) => (
-              <ProfileCard
-                key={index}
-                name={doctor.name}
-                address={doctor.address}
-                image={doctor.image}
-                specialty={doctor.specialty}
-              />
-            ))}
-          </GridContainer>
-          <Pagination
-            currentPage={currentPage}
-            onChange={paginationClickHandler}
-            pageSize={12}
-            itemCount={doctorsList.length}
-          />
+          <SidePanel />
+          <FlexContainer
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              width: "77%",
+              justifyContent: "space-between",
+              height: "950px",
+            }}
+          >
+            <GridContainer>
+              {cardList.map((doctor, index) => (
+                <ProfileCard
+                  key={index}
+                  name={doctor.name}
+                  address={doctor.address}
+                  image={doctor.image}
+                  specialty={doctor.specialty}
+                />
+              ))}
+            </GridContainer>
+            <Pagination
+              currentPage={currentPage}
+              onChange={paginationClickHandler}
+              pageSize={12}
+              itemCount={doctorsList.length}
+            />
+          </FlexContainer>
         </FlexContainer>
       </FlexContainer>
       <Footer />
