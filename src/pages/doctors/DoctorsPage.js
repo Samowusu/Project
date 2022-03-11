@@ -6,7 +6,7 @@ import FlexContainer from "../../components/UI/containers/FlexContainer";
 import GridContainer from "../../components/UI/containers/GridContainer";
 import ProfileCard from "../../components/UI/profileCard/ProfileCard";
 import Pagination from "../../components/pagination/Pagination";
-import { doctorsList } from "../../Data";
+import { doctorsListPagination } from "../../Data";
 import Footer from "../../components/footer/Footer";
 
 function DoctorsPage() {
@@ -19,7 +19,7 @@ function DoctorsPage() {
     if (
       currentPage === pageNumber ||
       pageNumber === 0 ||
-      pageNumber > Math.ceil(doctorsList.length / pageSize)
+      pageNumber > Math.ceil(doctorsListPagination.length / pageSize)
     )
       return;
 
@@ -33,7 +33,7 @@ function DoctorsPage() {
   };
 
   useEffect(() => {
-    const data = doctorsList.slice(startIndex, endIndex);
+    const data = doctorsListPagination.slice(startIndex, endIndex);
     setCardList([...data]);
   }, [currentPage, startIndex, endIndex]);
   //background : #F8F9FC
@@ -84,7 +84,7 @@ function DoctorsPage() {
               currentPage={currentPage}
               onChange={paginationClickHandler}
               pageSize={12}
-              itemCount={doctorsList.length}
+              itemCount={doctorsListPagination.length}
             />
           </FlexContainer>
         </FlexContainer>
