@@ -6,7 +6,7 @@ import FaceBook from "../../assets/svgs/FaceBook";
 import Instagram from "../../assets/svgs/Instagram";
 import LinkedIn from "../../assets/svgs/LinkedIn";
 import YouTube from "../../assets/svgs/YouTube";
-import Container from "../UI/container/Container";
+import Container from "../UI/containers/FlexContainer";
 import Typography from "../UI/typography/Typography";
 
 function Footer() {

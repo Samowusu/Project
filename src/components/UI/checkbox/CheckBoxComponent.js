@@ -31,7 +31,7 @@ const BoxItem = ({ title }) => {
     <RadioContainer onClick={checkBoxHandler}>
       <BoxIcon val={checkedState} />
       <Typography
-        fontSize="l"
+        fontSize="m"
         fontWeight="regular"
         marginLeft={"10px"}
         textAlign="start"

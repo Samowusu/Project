@@ -8,7 +8,7 @@ function UserInput() {
       <BlackSearchIcon />
       <input
         type="text"
-        placeholder="Specialist, hospital, procedure, condi..."
+        placeholder="Specialist, hospital, procedure, conditions"
       />
     </div>
   );

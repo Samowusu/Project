@@ -7,7 +7,7 @@ import {
 } from "../../Data";
 import Blogs from "../../components/blogs/Blogs";
 import PopularSearches from "../../components/popularSearches/PopularSearches";
-import Header from "../../components/header/Header";
+import HomePageHeader from "../../components/header/HomePageHeader";
 import Banner from "../../components/banner/Banner";
 import HealthPartners from "../../components/healthPartners/HealthPartners";
 import Footer from "../../components/footer/Footer";
@@ -17,7 +17,7 @@ function Landing() {
   return (
     <div>
       {" "}
-      <Header />
+      <HomePageHeader />
       <Featured doctorsList={doctorsList} hospitalsList={hospitalsList} />
       <HealthPartners />
       <Banner />

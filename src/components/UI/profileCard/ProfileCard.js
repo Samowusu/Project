@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./ProfileCard.module.css";
-
+import styled from "styled-components";
 import doctor from "../../../assets/images/doctor.png";
 
 import CalendarIcon from "../../../assets/svgs/CalendarIcon";
@@ -33,7 +33,7 @@ function ProfileCard({
   hasStatus,
 }) {
   return (
-    <div className={classes["profile-card"]}>
+    <ProfileCardContainer>
       <div className={classes["profile-card__container"]}>
         <div
           className={classes.image}
@@ -77,8 +77,22 @@ function ProfileCard({
           </div>
         </div>
       </div>
-    </div>
+    </ProfileCardContainer>
   );
 }
 
 export default ProfileCard;
+
+const ProfileCardContainer = styled.div`
+  display: flex;
+  padding: 14px;
+  /* width: 181.99px; */
+  /* width: 210px; */
+  /* width: clamp(181.99px, 18%, 262px); */
+  min-width: 181.99px;
+  width: 18%;
+  box-shadow: 0px 9px 21px rgb(70 167 183 / 6%);
+  background: white;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+`;

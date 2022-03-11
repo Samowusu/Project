@@ -1,7 +1,7 @@
 import React from "react";
 import ProfileCard from "../../UI/profileCard/ProfileCard";
 import Button from "../../UI/button/Button";
-import Container from "../../UI/container/Container";
+import Container from "../../UI/containers/FlexContainer";
 import Typography from "../../UI/typography/Typography";
 
 function Hospitals({ hospitalsList }) {

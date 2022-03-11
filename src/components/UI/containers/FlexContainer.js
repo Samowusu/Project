@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "./Container-styles";
+import { Container } from "./FlexContainer-styles";
 
 ContainerComponent.defaultProps = {
   children: "",
@@ -22,6 +22,7 @@ ContainerComponent.defaultProps = {
     borderTopStyle: "none",
     maxWidth: "none",
     borderRadius: "0",
+    height: "auto",
   },
 };
 

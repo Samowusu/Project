@@ -3,7 +3,7 @@ import classes from "./HealthPartners.module.css";
 import healthPartners from "../../assets/images/healthPartners.png";
 import Typography from "../UI/typography/Typography";
 import Button from "../UI/button/Button";
-import Container from "../UI/container/Container";
+import Container from "../UI/containers/FlexContainer";
 
 function HealthPartners() {
   return (
