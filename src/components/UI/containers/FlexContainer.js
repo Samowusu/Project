@@ -1,4 +1,3 @@
-import { autocompleteClasses } from "@mui/material";
 import React from "react";
 import { Container } from "./FlexContainer-styles";
 
