@@ -14,7 +14,7 @@ import SwitchButton from "../UI/switchButton/SwitchButton";
 import Insurance from "../UI/insurance/Insurance";
 
 // data
-import { blogsList, specialtiesList, doctorsList } from "../../Data";
+import { blogsList, specialtiesList, doctorsListPagination } from "../../Data";
 // import { pageSize } from "../pagination/Pagination";
 
 // images
@@ -56,7 +56,7 @@ function Glossary() {
   /*take the array(from the DB or config file) and slice it into the desired 
   number of items to display per page(i.e pageSize) */
   useEffect(() => {
-    const data = doctorsList.slice(startIndex, endIndex);
+    const data = doctorsListPagination.slice(startIndex, endIndex);
     setCardList([...data]);
   }, [currentPage, startIndex, endIndex]);
 
@@ -77,7 +77,7 @@ function Glossary() {
     if (
       currentPage === pageNumber ||
       pageNumber === 0 ||
-      pageNumber > Math.ceil(doctorsList.length / pageSize)
+      pageNumber > Math.ceil(doctorsListPagination.length / pageSize)
     )
       return;
 
@@ -116,12 +116,7 @@ function Glossary() {
             />
           ))}
         </div>
-        <Pagination
-          currentPage={currentPage}
-          onChange={paginationClickHandler}
-          pageSize={8}
-          itemCount={doctorsList.length}
-        />
+        <Pagination />
       </div>
       <Insurance />
       <CheckBoxComponent header={"Specialist"} options={CHECK_OPTIONS} />
