@@ -41,7 +41,7 @@
   text-decoration: none;
 }
 
-.navBar-left nav a .active {
+.navBar-left nav a.active {
   border-bottom: 3px solid #ff7d19;
   color: #ff7d19;
 }
