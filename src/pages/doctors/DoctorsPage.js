@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import doctorsHeader from "../../assets/images/doctorsheader.png";
+import doctorsHeader from "../../assets/images/background.png";
 import Header from "../../components/header/Header";
 import SidePanel from "../../components/sidePanel/SidePanel";
 import FlexContainer from "../../components/UI/containers/FlexContainer";

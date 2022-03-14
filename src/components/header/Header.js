@@ -22,26 +22,65 @@ function Header({ backgroundImage }) {
         paddingBottom={"2.5rem"}
         paddingLeft={"2.19rem"}
         paddingRight={"2.19rem"}
+        backgroundColor="#46A7B7"
       >
         <Search />
-        <Container style={{ justifyContent: "flex-end", marginTop: "6.88rem" }}>
-          <Typography
-            marginRight={"1.31rem"}
-            color="#ffffff"
-            fontSize={"standard"}
-            fontWeight="regular"
+        <Container
+          style={{ marginTop: "6.88rem", justifyContent: "space-between" }}
+        >
+          <Container
+            style={{ flexDirection: "column", alignItems: "flex-start" }}
           >
-            Map View
-          </Typography>
-          <SwitchButton value={checkedState} onChange={switchChangeHandler} />
-          <Typography
-            marginLeft={"1.31rem"}
-            color="#ffffff"
-            fontSize={"standard"}
-            fontWeight="regular"
-          >
-            List View
-          </Typography>
+            <Container
+              style={{
+                justifyContent: "flex-start",
+                marginBottom: "5px",
+              }}
+            >
+              <Typography color={"#ffffff"} fontSize={"l"} marginRight={"10px"}>
+                FIND DOCTOR
+              </Typography>
+              <Typography fontSize={"s"} color="#ffffff" marginTop={"3px"}>
+                400+ Doctors
+              </Typography>
+            </Container>
+            <Container style={{ justifyContent: "flex-start" }}>
+              <Typography
+                marginRight={"15px"}
+                fontWeight="bolder"
+                fontSize={"xl"}
+                color="#ffffff"
+              >
+                Doctors{" "}
+              </Typography>
+              <Typography marginRight={"9px"} fontSize="xl" color={"#ffffff"}>
+                near{" "}
+              </Typography>
+              <Typography fontWeight="bolder" fontSize={"xl"} color="#ffffff">
+                {" "}
+                You
+              </Typography>
+            </Container>
+          </Container>
+          <Container style={{ justifyContent: "flex-end" }}>
+            <Typography
+              marginRight={"1.31rem"}
+              color="#ffffff"
+              fontSize={"standard"}
+              fontWeight="regular"
+            >
+              Map View
+            </Typography>
+            <SwitchButton value={checkedState} onChange={switchChangeHandler} />
+            <Typography
+              marginLeft={"1.31rem"}
+              color="#ffffff"
+              fontSize={"standard"}
+              fontWeight="regular"
+            >
+              List View
+            </Typography>
+          </Container>
         </Container>
       </HeaderBottom>
     </Container>
